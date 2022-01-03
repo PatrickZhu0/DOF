@@ -1,0 +1,10 @@
+.vs
+.vsconfig
+.vs/DOF/v17/.suo
+Library
+Logs
+obj
+Temp
+Assembly-CSharp.csproj
+Assembly-CSharp-Editor.csproj
+DOF.sln
