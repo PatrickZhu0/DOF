@@ -100,7 +100,6 @@ namespace FAnimSystem
             {
                 curFrameIdx = 0;
             }
-            UnityEngine.Debug.Log(curFrameIdx+"  "+Frames.Count);
             FFrame curFrame = Frames[curFrameIdx];
             ++curFrameIdx;
             return curFrame;

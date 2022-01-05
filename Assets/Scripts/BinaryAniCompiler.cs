@@ -63,7 +63,7 @@ public class BinaryAniCompiler
 
     public static void LoadAni(string filePath)
     {
-        filePath = Application.dataPath + "/../PvfRoot/character/fighter/atanimation/attack1.ani";
+        filePath = Application.dataPath + "/../PvfRoot/character/fighter/animation/move.ani";
         //filePath = Path.Combine(Application.streamingAssetsPath, "108stairsexfinal.ani");
         //string filePath = "C:/Users/unknown/Desktop/Documents/DNFTools/finishfinal5.ani";
         Debug.LogError(filePath);
@@ -98,12 +98,17 @@ public class BinaryAniCompiler
                 //按类型读取不同长度值
                 switch (globalType)
                 {
-                    //目前只发现一种
                     case (int)ANIData.SHADOW:
                         sb.Append("   [SHADOW]\r\n");
                         //byte globalParamValue = br.ReadByte
                         byte shadow = br.ReadByte();
                         sb.AppendFormat("   {0}\r\n", shadow);
+                        break;
+                    case (int)ANIData.LOOP:
+                        sb.Append("   [LOOP]\r\n");
+                        //byte globalParamValue = br.ReadByte
+                        byte loop = br.ReadByte();
+                        sb.AppendFormat("   {0}\r\n", loop);
                         break;
                 }
             }
@@ -214,7 +219,7 @@ public class BinaryAniCompiler
 
     public static void LoadAni(string filePath, ref FAnimSystem.FAnimNode fAnimNode)
     {
-        filePath = Application.dataPath + "/../PvfRoot/character/fighter/atanimation/attack4.ani";
+        filePath = Application.dataPath + "/../PvfRoot/character/fighter/animation/rest.ani";
         StringBuilder sb = new StringBuilder();
         using (FileStream st = File.OpenRead(filePath))
         {
@@ -248,12 +253,17 @@ public class BinaryAniCompiler
                 //按类型读取不同长度值
                 switch (globalType)
                 {
-                    //目前只发现一种
                     case (int)ANIData.SHADOW:
                         sb.Append("   [SHADOW]\r\n");
                         //byte globalParamValue = br.ReadByte
                         byte shadow = br.ReadByte();
                         sb.AppendFormat("   {0}\r\n", shadow);
+                        break;
+                    case (int)ANIData.LOOP:
+                        sb.Append("   [LOOP]\r\n");
+                        //byte globalParamValue = br.ReadByte
+                        byte loop = br.ReadByte();
+                        sb.AppendFormat("   {0}\r\n", loop);
                         break;
                 }
             }
