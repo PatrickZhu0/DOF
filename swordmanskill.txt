@@ -1,0 +1,351 @@
+112
+"Swordman/TripleStab.skl" 鬼影三击剑
+115
+"Swordman/GhostSideWindEx.skl" 鬼影鞭EX
+116
+"Swordman/TripleStabEx.skl" 鬼影三击剑EX
+139
+"Swordman/PinchPowerUpEx.skl" 血气唤醒EX
+140
+"Swordman/NormalWaveEx.skl" 地裂波动剑EX
+141
+"Swordman/GoreCrossEx.skl" 十字斩EX
+142
+"Swordman/HardAttackEx.skl"
+143
+"Swordman/TripleSlashEx.skl"
+144
+"Swordman/HitBackEx.skl"
+145
+"Swordman/AutoGuardEx.skl"
+146
+"Swordman/BremenEx.skl"
+147
+"Swordman/GhostStepEx.skl"
+148
+"Swordman/DieHardEx.skl"
+149
+"Swordman/RecklessEx.skl"
+150
+"Swordman/DOTAreaEx.skl"
+1
+"Swordman/Guard.skl" 格挡
+2
+"Swordman/ReflectGuard.skl" 鬼印珠
+3
+"Swordman/AutoGuard.skl" 自动格挡
+4
+"Swordman/LightSwordMastery.skl" 光剑精通
+5
+"Swordman/HardAttack.skl" 鬼斩
+6
+"Swordman/HardAttackCharge.skl" 噬灵鬼斩
+7
+"Swordman/HitBack.skl" 逆转反击
+8
+"Swordman/TripleSlash.skl" 三段斩
+9
+"Swordman/MomentarySlash.skl" 拔刀斩
+11
+"Swordman/DashAttackMultiHit.skl" 连突刺
+12
+"Swordman/ShortSwordMastery.skl" 短剑精通
+13
+"Swordman/BladeMastery.skl" 太刀精通 
+14
+"Swordman/HeavySwordMastery.skl" 巨剑精通
+15
+"Swordman/BluntMastery.skl" 钝器精通
+16
+"Swordman/AshenFork.skl" 银光落刃
+17
+"Swordman/JumpAttackMulti.skl" 空中连斩
+18
+"Swordman/GhostStep.skl" 鬼影步
+19
+"Swordman/PinchPowerUp.skl" 血气唤醒
+20
+"Swordman/NormalWave.skl" 地裂波动剑
+21
+"Swordman/IceWave.skl" 冰波
+22
+"Swordman/FireWave.skl" 爆炎·波动剑
+23
+"Swordman/Sacrifice.skl" 嗜血
+24
+"Swordman/BloodBlast.skl" 怒气爆发
+25
+"Swordman/Khazan.skl" 红阵
+27
+"Swordman/WeaponMasteryUp.skl" 武器奥义
+29
+"Swordman/DarkFriendship.skl" 暗之亲和
+30
+"Swordman/DarkToleranceUp.skl" 暗月降临
+31
+"Swordman/GrabBlastBlood.skl" 嗜魂之手
+32
+"Swordman/ReleaseWave.skl" 波动爆发
+33
+"Swordman/EquipLightSword.skl" 光剑掌握
+34
+"Swordman/DieHard.skl" 死亡抗拒
+35
+"Swordman/GhostPowerUp.skl" 封印解除
+36
+"Swordman/Saya.skl" 冰阵
+37
+"Swordman/FastEquip.skl" 疾影手
+38
+"Swordman/OverDrive.skl" 破极兵刃
+39
+"Swordman/DurabilityUp.skl" 武器节制
+40
+"Swordman/Reckless.skl" 暴走
+41
+"Swordman/Bremen.skl" 绿阵
+42
+"Swordman/DisjointItemDark.skl" 黑暗分解？
+43
+"Swordman/JumpAttackHighFast.skl" 
+44
+"Swordman/TombStoneRain.skl" 死亡墓碑
+46
+"Swordman/UpperSlash.skl" 上挑
+47
+"Swordman/WaveMark.skl" 波动刻印
+49
+"Swordman/BackStepCutter.skl" 后跳斩
+50
+"Swordman/GrandWave.skl" 邪光斩
+51
+"Swordman/GrandWaveCharge.skl" 修罗邪光斩
+52
+"Swordman/DOTArea.skl" 杀意波动
+53
+"Swordman/MindFlash.skl" 挫折意志
+55
+"Swordman/SenseViolentTemper.skl" 
+56
+"Swordman/ArmorMasteryHeavyBK.skl" 重甲精通
+57
+"Swordman/ShockWaveArea.skl" 邪光波动阵
+58
+"Swordman/VaneSlash.skl" 裂波斩
+60
+"Swordman/GhostStepSlash.skl" 鬼影闪
+61
+"Swordman/ArmorMasteryPlateWave.skl" 板甲精通 阿修罗 
+62
+"Swordman/StandAloneWave.skl" 无双波
+63
+"Swordman/BloodyVigorous.skl" 血气旺盛
+64
+"Swordman/GoreCross.skl" 十字斩
+65
+"Swordman/HopSmash.skl" 崩山击
+67
+"Swordman/WeaponCombo.skl" 里鬼
+68
+"Swordman/ChargeCrash.skl" 破军升龙击
+72
+"Swordman/RapidMoveSlash.skl" 猛龙断空斩
+73
+"Swordman/IllusionSlash.skl" 幻影剑舞
+74
+"Swordman/WaveSpinArea.skl" 不动明王阵
+75
+"Swordman/EpidemicRasa.skl" 瘟疫之罗刹
+76
+"Swordman/Frenzy.skl" 血之狂暴
+77
+"Swordman/MoonlightSlash.skl" 月光斩
+79
+"Swordman/BloodyRave.skl" 噬魂封魔斩
+80
+"Swordman/MoonlightSlashFull.skl" 满月斩
+81
+"Swordman/OutRageBreak.skl" 崩山裂地斩
+82
+"Swordman/Kalla.skl" 冥炎之卡洛
+84
+"Swordman/Keiga.skl" 残影之铠甲
+85
+"Swordman/Hellbenter.skl" 魔狱血刹 红眼觉醒
+86
+"Swordman/HundredSword.skl" 极 · 鬼剑术（暴风式）
+87
+"Swordman/Blache.skl" 第七鬼神：邪神怖拉修
+88
+"Swordman/WaveEye.skl" 暗天波动眼
+89
+"Swordman/DarkAura.skl" 恐惧光环
+90
+"Swordman/BleedingMastery.skl" 出血掌握
+91
+"Swordman/DefenseDownOnCritical.skl" 
+92
+"Swordman/StuckUpOnCounter.skl"
+93
+"Swordman/ArmorMasteryClothSB.skl" 布甲精通 鬼泣
+94
+"Swordman/ArmorMasteryLightWM.skl" 轻甲精通 剑魂
+95
+"Swordman/TombStoneRainEx.skl" 墓碑三绝阵
+96
+"Swordman/SayaEx.skl" 冰晶之萨亚
+97
+"Swordman/MomentarySlashEx.skl" 大拔刀
+98
+"Swordman/ChargeCrashEx.skl" 破军斩龙击
+99
+"Swordman/FireWaveEx.skl" 大火波
+100
+"Swordman/IceWaveEx.skl" 大冰波
+101
+"Swordman/BloodBlastEx.skl" 大怒气
+102
+"Swordman/GrabBlastBloodEx.skl" 灭魂之手
+103
+"Swordman/BloodSword.skl" 血气之刃
+105
+"Swordman/FlowMind.skl" 流心
+107
+"Swordman/FlowMindOne.skl" 流心·刺
+108
+"Swordman/FlowMindTwo.skl" 流心·跃
+109
+"Swordman/FlowMindThree.skl" 流心·升
+110
+"Swordman/FlowMindPowerUp.skl" 流心·狂
+111
+"Swordman/GhostSideWind.skl" 鬼影鞭
+151
+"Swordman/WaveMarkEx.skl"
+152
+"Swordman/RapidMoveSlashEx.skl"
+153
+"Swordman/AshenForkEx.skl"
+154
+"Swordman/MomentarySlashExp.skl"
+155
+"Swordman/MoonlightSlashEx.skl"
+156
+"Swordman/EpidemicRasaEx.skl"
+157
+"Swordman/HopSmashEx.skl"
+158
+"Swordman/BloodyRaveEx.skl"
+159
+"Swordman/VaneSlashEx.skl"
+160
+"Swordman/ReflectGuardEx.skl" 鬼印珠EX?
+161
+"Swordman/BasicAttackUpEx.skl"
+162
+"Swordman/DashAttackMultiHitEx.skl"
+163
+"Swordman/GuardEx.skl" 强化-格挡
+中间都是tp技能
+164
+"Swordman/KhazanEx.skl" 强化-卡赞
+165
+"Swordman/GrabBlastBloodExp.skl"
+166
+"Swordman/BloodBlastExp.skl"
+167
+"Swordman/OutRageBreakEx.skl"
+168
+"Swordman/BloodSwordEx.skl"
+169
+"Swordman/BackStep.skl" 后跳
+172
+"Swordman/ArmorMasteryLight.skl" 轻甲精通
+173
+"Swordman/ArmorMasteryHeavy.skl" 重甲精通
+174
+"Swordman/BasicAttackUp.skl" 基础攻击提升
+175
+"Swordman/JumpPowerUp.skl" 跃翔
+176
+"Swordman/MagicalAttackUp.skl" 智力提升
+177
+"Swordman/ThrowMastery.skl" 投掷精通
+178
+"Swordman/PhysicalBackAttackCritical.skl" 物理背击
+179
+"Swordman/DisjointItem.skl" 分解
+180
+"Swordman/SuperArmorOnCast.skl" 
+181
+"Swordman/CompoundCraft.skl"
+182
+"Swordman/CompoundWeaving.skl"
+183
+"Swordman/CompoundMachine.skl"
+184
+"Swordman/CompoundChemistry.skl"
+185
+"Swordman/ArmorMasteryLeather.skl" 皮甲精通
+186
+"Swordman/PhysicalCriticalHitUp.skl" 物理暴击
+187
+"Swordman/ArmorMasteryCloth.skl" 布甲精通
+188
+"Swordman/MagicalCriticalHitUp.skl" 魔法暴击
+189
+"Swordman/MagicalBackAttackCritical.skl" 魔法背击
+190
+"Swordman/QuickStanding.skl" 受身蹲伏
+195
+"Swordman/BasicHpMaxUp.skl" 基础HP提升
+196
+"Swordman/ArmorMasteryPlate.skl" 板甲精通
+197
+"Swordman/Conversion.skl" 转换
+200
+"Swordman/StatusUp.skl" 状态提升
+201
+"Swordman/ExperienceUp.skl" 经验提升
+191
+"Swordman/Enchant.skl" 附魔
+192
+"Swordman/DollMaking.skl" 人偶制造
+193
+"Swordman/Alchemy.skl" 炼金术
+194
+"Swordman/OpenDisjointShop.skl" 打开分解商店
+210
+"Swordman/ReleaseWaveEx.skl" 强化—波动爆发
+211
+"Swordman/GrandWaveEx.skl" 强化—邪光斩
+212
+"Swordman/FireWaveExp.skl" 强化-火波
+213
+"Swordman/StandAloneWaveEx.skl" 强化-无双波
+214
+"Swordman/WaveSpinAreaEx.skl" 强化-不动明王阵
+215
+"Swordman/UpperSlashEx.skl" 强化-上挑
+216
+"Swordman/IceWaveExp.skl" 强化-冰波
+217
+"Swordman/IllusionSlashExp.skl" 强化—幻影剑舞
+218
+"Swordman/ChargeCrashExp.skl" 强化- 破军升龙击
+219
+"Swordman/FlowMindOneEx.skl" 强化— 流心·刺
+220
+"Swordman/FlowMindTwoEx.skl" 强化—流心·跃
+221
+"Swordman/FlowMindThreeEx.skl" 强化—流心·升
+224
+"Swordman/SayaExp.skl" 强化—冰阵
+225
+"Swordman/TombStoneRainExp.skl" 强化—死亡墓碑
+226
+"Swordman/GhostStepSlashEx.skl" 强化—鬼影闪
+227
+"Swordman/KallaEx.skl" 强化—冥炎之卡洛
+228
+"Swordman/ReflectGuardExp.skl" 强化—鬼印珠
