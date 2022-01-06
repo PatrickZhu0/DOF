@@ -63,7 +63,7 @@ public class BinaryAniCompiler
 
     public static void LoadAni(string filePath)
     {
-        filePath = Application.dataPath + "/../PvfRoot/character/fighter/animation/move.ani";
+        filePath = Application.dataPath + "/../PvfRoot/character/swordman/animation/HopSmash.ani";
         //filePath = Path.Combine(Application.streamingAssetsPath, "108stairsexfinal.ani");
         //string filePath = "C:/Users/unknown/Desktop/Documents/DNFTools/finishfinal5.ani";
         Debug.LogError(filePath);
@@ -207,6 +207,17 @@ public class BinaryAniCompiler
                             sb.Append("   [GRAPHIC_EFFECT]\r\n");
                             sb.AppendFormat("   '{0}'\r\n", (Effect_Item)effectType);
                             break;
+                        case (int)ANIData.DAMAGE_TYPE:
+                            int damage_type = br.ReadInt16();
+                            //char[] type_name = br.ReadChars(type_length);
+                            sb.Append("   [DAMAGE_TYPE]\r\n");
+                            sb.AppendFormat("   '{0}'\r\n", (DAMAGE_TYPE_Item)damage_type);
+                            break;
+                        case (int)ANIData.SET_FLAG:
+                            int set_flag = br.ReadInt32();
+                            sb.Append("   [SET_FLAG]\r\n");
+                            sb.AppendFormat("   '{0}'\r\n", set_flag);
+                            break;
                     }
                 }
 
@@ -281,16 +292,28 @@ public class BinaryAniCompiler
                     switch (boxType)
                     {
                         case (int)ANIData.DAMAGE_BOX:
+                            int[] boxParams = new int[6];
                             for (int j = 0; j < 6; j++)
                             {
-                                int boxParam2 = br.ReadInt32();
+                                int boxParam = br.ReadInt32();
+                                boxParams[j] = boxParam;
                             }
+                            var boxRect1 = Rect.MinMaxRect(boxParams[0], boxParams[1], boxParams[3], boxParams[4]);
+                            fFrame.DamageBoxXY.Add(boxRect1);
+                            var boxRect2 = Rect.MinMaxRect(boxParams[0], boxParams[2], boxParams[3], boxParams[5]);
+                            fFrame.DamageBoxXZ.Add(boxRect2);
                             break;
                         case (int)ANIData.ATTACK_BOX:
+                            int[] attackBoxParams = new int[6];
                             for (int j = 0; j < 6; j++)
                             {
-                                int boxParam2 = br.ReadInt32();
+                                int boxParam = br.ReadInt32();
+                                attackBoxParams[j] = boxParam;
                             }
+                            var attackBoxRect1 = Rect.MinMaxRect(attackBoxParams[0], attackBoxParams[1], attackBoxParams[3], attackBoxParams[4]);
+                            fFrame.AttackBoxXY.Add(attackBoxRect1);
+                            var attackBoxRect2 = Rect.MinMaxRect(attackBoxParams[0], attackBoxParams[2], attackBoxParams[3], attackBoxParams[5]);
+                            fFrame.AttackBoxXZ.Add(attackBoxRect2);
                             break;
                     }
 
@@ -338,6 +361,12 @@ public class BinaryAniCompiler
                             break;
                         case (int)ANIData.GRAPHIC_EFFECT:
                             var effectType = br.ReadInt16();
+                            break;
+                        case (int)ANIData.DAMAGE_TYPE:
+                            int damage_type = br.ReadInt16();
+                            break;
+                        case (int)ANIData.SET_FLAG:
+                            int set_flag = br.ReadInt32();
                             break;
                     }
                 }

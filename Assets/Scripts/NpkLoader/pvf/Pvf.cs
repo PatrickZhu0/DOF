@@ -92,22 +92,6 @@ namespace pvfLoaderXinyu
             return getPvfFileByPath(node, encoding);
         }
 
-        public string unpackAniFileByPath(string path)//根据文件名返回文件内容
-        {
-            var node = headerTreeCache[path.ToLower().Trim()];
-            if (node == null)
-                return null;
-            byte[] unpackedStrBytes = node.unpackedFileByteArr;
-            Stream st = new MemoryStream(unpackedStrBytes);
-            BinaryReader br = new BinaryReader(st);
-            st.Seek(2, SeekOrigin.Begin);
-            int frame = br.ReadUInt16();
-            UnityEngine.Debug.LogError("frame:" + frame);
-
-
-            return "";
-        }
-
         public string getPvfFileByPath(HeaderTreeNode node, Encoding encoding)//根据文件索引对象返回文件内容
         {
             byte[] unpackedStrBytes = node.unpackedFileByteArr;//直接取解密内容

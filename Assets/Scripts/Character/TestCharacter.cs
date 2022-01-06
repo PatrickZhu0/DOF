@@ -16,19 +16,20 @@ public class TestCharacter : MonoBehaviour
 
 
     public string imgPath = "npkroot/character/swordman/saber";
-
-    // Start is called before the first frame update
     void Start()
+    {
+        BinaryAniCompiler.LoadAni("");
+
+        string aniPath = Application.dataPath + "/../PvfRoot/character/swordman/animation/stay.ani";
+        SetAni(aniPath);
+    }
+    void SetAni(string aniPath)
     {
         fAnimNode = new FAnimSystem.FAnimNode();
 
-        string aniPath = Application.dataPath + "/../PvfRoot/character/swordman/animation/rest.ani";
         BinaryAniCompiler.LoadAni(aniPath, ref fAnimNode);
-
-
         Extract1.Album album = ResourcesManager.Instance.loadImg(imgPath);
         spriteArray.sprites = new Sprite[album.Count];
-
 
         for (int i = 0; i < fAnimNode.FrameMax; i++)
         {
@@ -40,13 +41,11 @@ public class TestCharacter : MonoBehaviour
             rect.width = picture.Width;
             rect.height = picture.Height;
             Vector2 ancher = new Vector2();
-            Debug.LogError(spriteIndex + "  " + picture.X + "  " + picture.Y);
-            Debug.LogError(frame.ImagePosX + "  " + frame.ImagePosY + "  " + picture.Width + "  " + picture.Height);
+
             ancher.x = 0.5f - (frame.ImagePosX + picture.X + rect.width / 2) / rect.width;
             ancher.y = 0.5f + (frame.ImagePosY + picture.Y + rect.height / 2) / rect.height;
             spriteArray.sprites[spriteIndex] = Sprite.Create(picture.Texture, rect, ancher, 1.0f);
         }
-
     }
 
     double lastTime = 0;
@@ -60,5 +59,84 @@ public class TestCharacter : MonoBehaviour
             frame = fAnimNode.getCurFrame();
         }
         spriteRenderer.sprite = spriteArray.sprites[frame.ImgFrameIdx];
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            string aniPath = Application.dataPath + "/../PvfRoot/character/swordman/animation/attack1.ani";
+            SetAni(aniPath);
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            string aniPath = Application.dataPath + "/../PvfRoot/character/swordman/animation/attack2.ani";
+            SetAni(aniPath);
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            string aniPath = Application.dataPath + "/../PvfRoot/character/swordman/animation/attack2.ani";
+            SetAni(aniPath);
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            string aniPath = Application.dataPath + "/../PvfRoot/character/swordman/animation/HopSmashReady.ani";
+            SetAni(aniPath);
+        }
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            string aniPath = Application.dataPath + "/../PvfRoot/character/swordman/animation/HopSmash.ani";
+            SetAni(aniPath);
+        }
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            string aniPath = Application.dataPath + "/../PvfRoot/character/swordman/animation/Chargecrashexupper.ani";
+            SetAni(aniPath);
+        }
+
     }
+
+    void OnGUI()
+    {
+        if (frame == null)
+            return;
+
+        foreach (Rect rect in frame.DamageBoxXY)
+        {
+            //EditorGUITools.DrawRect(rect, Color.cyan);
+            DebugDarwRect(rect, Color.cyan);
+        }
+
+        foreach (Rect rect in frame.DamageBoxXZ)
+        {
+            //EditorGUITools.DrawRect(rect, Color.green);
+            DebugDarwRect(rect, Color.green);
+        }
+
+        foreach (Rect rect in frame.AttackBoxXY)
+        {
+            //EditorGUITools.DrawRect(rect, Color.red);
+            DebugDarwRect(rect, Color.magenta);
+        }
+
+        foreach (Rect rect in frame.AttackBoxXZ)
+        {
+            //EditorGUITools.DrawRect(rect, Color.magenta);
+            DebugDarwRect(rect, Color.red);
+        }
+    }
+
+    void DebugDarwRect(Rect rect, Color color)
+    {
+        //lian(AB)
+        Debug.DrawLine(rect.min, new Vector2(rect.xMax, rect.yMin), color);
+        //lian(AD)
+        Debug.DrawLine(rect.min, new Vector2(rect.xMin, rect.yMax), color);
+        //lian(CB)
+        Debug.DrawLine(rect.max, new Vector2(rect.xMax, rect.yMin), color);
+        //lian(CD)
+        Debug.DrawLine(rect.max, new Vector2(rect.xMin, rect.yMax), color);
+    }
+
 }

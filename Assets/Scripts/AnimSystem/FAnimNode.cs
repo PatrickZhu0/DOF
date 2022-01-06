@@ -66,12 +66,22 @@ namespace FAnimSystem
 
         int delay;
 
+        List<Rect> damageBoxXY = new List<Rect>();
+        List<Rect> damageBoxXZ = new List<Rect>();
+
+        List<Rect> attackBoxXY = new List<Rect>();
+        List<Rect> attackBoxXZ = new List<Rect>();
+
         #endregion
         public int ImgIndex { get => imgIndex; set => imgIndex = value; }
         public int ImgFrameIdx { get => imgFrameIdx; set => imgFrameIdx = value; }
         public int ImagePosX { get => imagePosX; set => imagePosX = value; }
         public int ImagePosY { get => imagePosY; set => imagePosY = value; }
         public int Delay { get => delay; set => delay = value; }
+        public List<Rect> DamageBoxXY { get => damageBoxXY; set => damageBoxXY = value; }
+        public List<Rect> DamageBoxXZ { get => damageBoxXZ; set => damageBoxXZ = value; }
+        public List<Rect> AttackBoxXY { get => attackBoxXY; set => attackBoxXY = value; }
+        public List<Rect> AttackBoxXZ { get => attackBoxXZ; set => attackBoxXZ = value; }
 
         //int boxCount;
 
