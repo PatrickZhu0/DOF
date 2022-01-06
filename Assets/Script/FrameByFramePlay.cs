@@ -65,7 +65,6 @@ public class FrameByFramePlay : MonoBehaviour
             anchorArray[i * 2 + 1] = anchorArray[i * 2 + 1] - Convert.ToInt32(offset.y);
         }
 
-
         for (int i = 0; i < anchorVectorArray.Length; i++)
         {
             anchorVectorArray[i].x = anchorArray[i * 2];
@@ -74,7 +73,6 @@ public class FrameByFramePlay : MonoBehaviour
 
         for (int i = 0; i < spriteArray.Length; i++)
         {
-            Debug.LogErrorFormat("{0}, {1} {2}, {3}", spriteArray[i].rect.x, spriteArray[i].rect.y, spriteArray[i].rect.width, spriteArray[i].rect.height);
             spriteArray[i] = Sprite.Create(textureArray[i], spriteArray[i].rect, new Vector2(0.5f - (anchorVectorArray[i].x + spriteArray[i].rect.width / 2) / spriteArray[i].rect.width, 0.5f + (anchorVectorArray[i].y + spriteArray[i].rect.height / 2) / spriteArray[i].rect.height), 1.0f);
         }
 

@@ -374,4 +374,114 @@ public class BinaryAniCompiler
             }
         }
     }
+
+    public static void loadStringTableBin(string filePath)
+    {
+        using (FileStream fs = File.OpenRead(filePath))
+        {
+            byte[] buffer = new byte[fs.Length];
+
+            fs.Read(buffer, 0, buffer.Length);
+            fs.Seek(0, SeekOrigin.Begin);
+                
+            //    BinaryReader br = new BinaryReader(st);
+            ////Util.unpackHeaderTree(ref buffer, buffer.Length, fileCrc32);
+            //uint count = br.ReadUInt16();
+            //Debug.LogError(count);
+            //for (int i = 0; i < count; i++)
+            //{
+            //    int startpos = br.ReadInt32();
+            //    int endpos = br.ReadInt32();
+            //    int len = endpos - startpos;//相减就是值的长度
+            //    //int index = i;//索引就是出现的第几个
+            //    //var pathBytes = new byte[len];//分配内存以存储该值的字符串
+            //    //Array.Copy(unpackedFileByteArr, startpos + 4, pathBytes, 0, len);//取出该字符串内容
+            //    var pathBytes = br.ReadBytes(len);
+            //    string pathName = Encoding.GetEncoding("BIG5").GetString(pathBytes).TrimEnd(new char[1]);//解码，这里使用的是BIG5，对于某些文件不一定正确，如果需要更正可以在这个编码这里下手。
+            //    Debug.LogError(pathName);
+            //}
+        }
+    }
+
+    public static void LoadChr(string filePath)
+    {
+        Debug.LogError(filePath);
+        StringBuilder sb = new StringBuilder();
+        using (FileStream fs = File.OpenRead(filePath))
+        {
+            byte[] buffer = new byte[fs.Length];
+            fs.Read(buffer, 0, buffer.Length);
+            fs.Seek(0, SeekOrigin.Begin);
+            
+            Util.unpackHeaderTree(ref buffer, buffer.Length, 2001802409);
+
+            
+
+            //BinaryReader br = new BinaryReader(buffer);
+            Debug.Log(BitConverter.ToInt32(buffer, 16));
+
+            //byte type = br.ReadByte();
+            //Debug.Log(type);
+            //if (type == 5)
+            //{
+
+            //}
+
+            //Debug.Log(br.ReadString());
+            //if (unpackedStrBytes.Length >= 7)//如果总字节长度>=7
+            //{
+            //    for (int i = 2; i < unpackedStrBytes.Length; i += 5)//以5为单步从第二位开始遍历字节
+            //    {
+            //        //string s = encoding.GetString(numArray).TrimEnd(new char[1]);
+            //        if (unpackedStrBytes.Length - i >= 5)//到最后了就不处理了防止内存越界
+            //        {
+            //            byte currentByte = unpackedStrBytes[i];//猜测应该是内容指示位
+            //            if (currentByte == 2 || currentByte == 4 || currentByte == 5 || currentByte == 6 || currentByte == 7 || currentByte == 8 || currentByte == 10)
+            //            //如果这个字节是这些中的一个进行对应的特殊处理，如果不是那就没有字符串
+            //            {
+            //                int after1 = BitConverter.ToInt32(unpackedStrBytes, i + 1);//取该指示位后面的整数
+            //                if (currentByte == 10)//这个字符是10时
+            //                {
+            //                    int before1 = BitConverter.ToInt32(unpackedStrBytes, i - 4);//取指示位前面的整数
+            //                                                                                //解释字符串内容的方法已集成到unpackSpecialChr(指示位,后一位整数,前一位整数)中
+            //                    bts = Encoding.UTF8.GetBytes(string.Concat(unpackSpecialChr(currentByte, after1, before1), "\r\n"));//获取该指示位代表的字符串
+            //                    arr.Add(strpos, bts);
+            //                    strpos += bts.Length;
+            //                }
+            //                else if (currentByte == 7)//这个字符是7时
+            //                {
+            //                    bts = Encoding.UTF8.GetBytes(string.Concat("`", unpackSpecialChr(currentByte, after1, 0), "`\r\n"));//7不需要前一位整数，外面要套上“``”
+            //                    arr.Add(strpos, bts);
+            //                    strpos += bts.Length;
+            //                }
+            //                else if (currentByte == 2 || currentByte == 4)//这个字符是2或者4时，末尾不是换行而是制表符\t
+            //                {
+            //                    bts = Encoding.UTF8.GetBytes(string.Concat(unpackSpecialChr(currentByte, after1, 0), "\t"));
+            //                    arr.Add(strpos, bts);
+            //                    strpos += bts.Length;
+            //                }
+            //                else if (currentByte == 6 || currentByte == 8)//{指示位=`stringbin[后面的整数]`}
+            //                {
+            //                    string[] str = new string[] { "{", currentByte.ToString(), "=`", unpackSpecialChr(currentByte, after1, 0), "`}\r\n" };
+            //                    bts = encoding.GetBytes(string.Concat(str));
+            //                    arr.Add(strpos, bts);
+            //                    strpos += bts.Length;
+            //                }
+            //                else if (currentByte == 5) //是5的情况，stringbin[后面的整数]
+            //                {
+            //                    bts = Encoding.UTF8.GetBytes(string.Concat("\r\n", unpackSpecialChr(currentByte, after1, 0), "\r\n"));
+            //                    arr.Add(strpos, bts);
+            //                    strpos += bts.Length;
+            //                }
+            //            }
+            //        }
+            //    }
+            //    bts = encoding.GetBytes("\r\n");//末尾添个换行符
+            //    arr.Add(strpos, bts);
+            //    strpos += bts.Length;
+            //}
+        }
+
+    }
+
 }

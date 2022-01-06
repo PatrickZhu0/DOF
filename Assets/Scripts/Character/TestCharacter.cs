@@ -16,6 +16,14 @@ public class TestCharacter : MonoBehaviour
 
 
     public string imgPath = "npkroot/character/swordman/saber";
+
+    void Awake()
+    {
+
+        Application.targetFrameRate = 60;
+
+    }
+
     void Start()
     {
         BinaryAniCompiler.LoadAni("");

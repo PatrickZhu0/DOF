@@ -26,7 +26,7 @@ namespace pvfLoaderXinyu
         public uint fileNumber;
         public uint fileCrc32;
 
-        public int readNodeFromBitArrStream(PvfHeader header, FileStream fs,byte[] unpackedHeaderTree, int offsite)
+        public int readNodeFromBitArrStream(PvfHeader header, FileStream fs, byte[] unpackedHeaderTree, int offsite)
         {
             try
             {
@@ -42,7 +42,7 @@ namespace pvfLoaderXinyu
                     computedFileLength = (int)((fileLength + 3L) & 4294967292L);
                     unpackedFileByteArr = new byte[computedFileLength];
                     fs.Seek(Marshal.SizeOf(typeof(PvfHeader)) + header.dirTreeLength + relativeOffset, SeekOrigin.Begin);
-                    fs.Read(unpackedFileByteArr,0, computedFileLength);
+                    fs.Read(unpackedFileByteArr, 0, computedFileLength);
                     Util.unpackHeaderTree(ref unpackedFileByteArr, computedFileLength, fileCrc32);
                     for (int i = 0; i < (computedFileLength - fileLength); i++)
                     {

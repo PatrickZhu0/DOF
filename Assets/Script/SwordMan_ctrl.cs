@@ -62,11 +62,6 @@ public class SwordMan_ctrl : MonoBehaviour
     public bool canTripleSlash = true;
 
 
-
-
-
-
-
     float doubleClickToRun_Timer;
     float jumpPositionY;
     float jumpReadyTime;
@@ -76,17 +71,12 @@ public class SwordMan_ctrl : MonoBehaviour
     public int tripleSlashCount_Local;
 
 
-
     public GameObject tripleSlash02_pre;
-
-
 
 
     void Awake()
     {
-
-        Application.targetFrameRate = 120;
-
+        Application.targetFrameRate = 60;
     }
 
 
@@ -102,8 +92,6 @@ public class SwordMan_ctrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
         if (heroAnimationState == HeroAnimationState.上挑 ||
             heroAnimationState == HeroAnimationState.后跳斩 ||
             heroAnimationState == HeroAnimationState.后跳斩结束 ||
@@ -115,7 +103,6 @@ public class SwordMan_ctrl : MonoBehaviour
             heroAnimationState == HeroAnimationState.三段斩二后摇)
         {
             isSkill = true;
-
         }
         else
             isSkill = false;
@@ -128,14 +115,10 @@ public class SwordMan_ctrl : MonoBehaviour
             heroAnimationState == HeroAnimationState.跳跃起 ||
             heroAnimationState == HeroAnimationState.跳跃顶)
         {
-
             isJump = true;
-
         }
         else
             isJump = false;
-
-
 
         Turn_Logic();
         Move_Logic();
@@ -145,8 +128,6 @@ public class SwordMan_ctrl : MonoBehaviour
         UpperSlash_Logic();
         TripleSlash_Logic();
 
-
-
         foreach (Transform t in gameObject.transform)
         {
 
@@ -154,67 +135,34 @@ public class SwordMan_ctrl : MonoBehaviour
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         PlayAnimation(heroAnimationState);
         heroAnimationState_Prev = heroAnimationState;
         transform.position = new Vector3(xyz.x, xyz.y + xyz.z, 0);
-
     }
 
 
     void Turn_Logic()
     {
-
-
         if (!isAtk && !isJumpBack && !isSkill)
         {
-
             canTurn = true;
-
         }
         else
         {
-
             canTurn = false;
-
         }
-
-
-
-
 
         if (canTurn && Input.GetKeyDown(KeyCode.LeftArrow))
         {
-
             left = true;
             transform.GetChild(0).GetComponent<SpritePlayCtrl>().isFlip = true;
-
         }
         else if (canTurn && Input.GetKeyDown(KeyCode.RightArrow))
         {
-
             left = false;
             transform.GetChild(0).GetComponent<SpritePlayCtrl>().isFlip = false;
-
         }
-
     }
-
-
 
     void Move_Logic()
     {
@@ -229,7 +177,6 @@ public class SwordMan_ctrl : MonoBehaviour
 
         if (canMove && heroAnimationState != HeroAnimationState.奔跑 && heroAnimationState != HeroAnimationState.行走 && (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)))
         {
-
             if (Time.time - doubleClickToRun_Timer >= 0.25f)
             {
                 heroAnimationState = HeroAnimationState.行走;
@@ -244,23 +191,16 @@ public class SwordMan_ctrl : MonoBehaviour
             }
         }
 
-
-
-
-
         if (heroAnimationState == HeroAnimationState.行走)
         {
-
             if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
             {
-
                 xyz.x += moveSpeed * BoolToInt(left) * -1 * Time.deltaTime;
 
                 if (Input.GetKey(KeyCode.UpArrow))
                     xyz.y += moveSpeed * Time.deltaTime * 0.5f;
                 else if (Input.GetKey(KeyCode.DownArrow))
                     xyz.y += moveSpeed * Time.deltaTime * -0.5f;
-
             }
             else if (Input.GetKey(KeyCode.UpArrow))
                 xyz.y += moveSpeed * Time.deltaTime * 0.5f;
@@ -271,20 +211,12 @@ public class SwordMan_ctrl : MonoBehaviour
                 heroAnimationState = HeroAnimationState.站立;
                 isMove = false;
             }
-
-
-
-
         }
         else if (heroAnimationState == HeroAnimationState.奔跑)
         {
-
             if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
             {
-
                 xyz.x += moveSpeed * BoolToInt(left) * -2 * Time.deltaTime;
-
-
             }
             else
             {
@@ -296,16 +228,8 @@ public class SwordMan_ctrl : MonoBehaviour
                 xyz.y += moveSpeed * Time.deltaTime * 0.5f;
             else if (Input.GetKey(KeyCode.DownArrow))
                 xyz.y += moveSpeed * Time.deltaTime * -0.5f;
-
-
         }
-
-
-
-
     }
-
-
 
     void Jump_Logic()
     {
@@ -338,7 +262,6 @@ public class SwordMan_ctrl : MonoBehaviour
             }
         }
 
-
         if (heroAnimationState == HeroAnimationState.跳跃起 || heroAnimationState == HeroAnimationState.跳跃顶)
         {
 
@@ -349,189 +272,134 @@ public class SwordMan_ctrl : MonoBehaviour
                 if (AnimationFlag(2, 0, false))
                 {
                     heroAnimationState = HeroAnimationState.跳跃顶;
-
                 }
-
-
             }
             else
             {
                 heroAnimationState = HeroAnimationState.跳跃落;
             }
 
-
             if (Input.GetKey(KeyCode.RightArrow))
             {
-
                 left = false;
                 xyz.x += moveSpeed * Time.deltaTime * 2;
-
             }
             else if (Input.GetKey(KeyCode.LeftArrow))
             {
-
                 left = true;
                 xyz.x -= moveSpeed * Time.deltaTime * 2;
-
             }
             else if (Input.GetKey(KeyCode.UpArrow))
             {
-
                 xyz.y += moveSpeed * Time.deltaTime * 0.5f;
-
             }
             else if (Input.GetKey(KeyCode.DownArrow))
             {
                 xyz.y -= moveSpeed * Time.deltaTime * 0.5f;
             }
-
         }
 
 
         if (heroAnimationState == HeroAnimationState.跳跃落 || heroAnimationState == HeroAnimationState.跳跃底)
         {
-
             jumpForce_Local += Time.deltaTime * 10;
             if (xyz.z > 0)
             {
-
                 xyz.z -= jumpForce_Local * Time.deltaTime * 80;
                 if (AnimationFlag(2, 0, false))
                 {
                     heroAnimationState = HeroAnimationState.跳跃底;
                 }
-
             }
             else
             {
-
                 heroAnimationState = HeroAnimationState.跳跃结束;
                 xyz.z = 0;
             }
 
             if (Input.GetKey(KeyCode.RightArrow))
             {
-
                 left = false;
                 xyz.x += moveSpeed * Time.deltaTime * 2;
-
             }
             else if (Input.GetKey(KeyCode.LeftArrow))
             {
-
                 left = true;
                 xyz.x -= moveSpeed * Time.deltaTime * 2;
-
             }
             else if (Input.GetKey(KeyCode.UpArrow))
             {
-
                 xyz.y += moveSpeed * Time.deltaTime * 0.5f;
-
             }
             else if (Input.GetKey(KeyCode.DownArrow))
             {
-
                 xyz.y -= moveSpeed * Time.deltaTime * 0.5f;
-
             }
-
         }
 
 
         if (heroAnimationState == HeroAnimationState.跳跃结束)
         {
-
-
             jumpReadyTime += Time.deltaTime;
             if (jumpReadyTime > 0.08)
             {
-
                 jumpReadyTime = 0;
                 heroAnimationState = HeroAnimationState.站立;
                 isJump = false;
-
             }
-
         }
-
-
     }
 
 
     void JumpBack_Logic()
     {
-
         if (!isJump && !isUpperSlash && !isJumpBack)
         {
-
             canJumpBack = true;
-
         }
         else
         {
-
             canJumpBack = false;
-
         }
-
 
         if (canJumpBack && Input.GetKeyDown(KeyCode.V))
         {
-
             jumpForce_Local = jumpForce / 2;
             PlayAnimation(heroAnimationState = HeroAnimationState.后跳);
             Sound_ctrl.PlaySound("sounds/char/Okita/sm_back", false, false);
 
             isJumpBack = true;
-
-
         }
-
 
         if (heroAnimationState == HeroAnimationState.后跳 && Input.GetKeyDown(KeyCode.X))
         {
-
             heroAnimationState = HeroAnimationState.后跳斩;
             Sound_ctrl.PlaySound("ogg/勇士/男鬼剑武器/beamswda_01", false, false);
             Sound_ctrl.PlaySound("sounds/char/Okita/sm_atk_03", false, false);
-
-
-
         }
 
         if (heroAnimationState == HeroAnimationState.后跳斩 && AnimationFlag(4, 0, false))
         {
-
-
             heroAnimationState = HeroAnimationState.后跳斩结束;
-
-
         }
 
         if (heroAnimationState == HeroAnimationState.后跳 || heroAnimationState == HeroAnimationState.后跳斩 || heroAnimationState == HeroAnimationState.后跳斩结束)
         {
-
             jumpForce_Local -= Time.deltaTime * 10;
             xyz.z += jumpForce_Local * Time.deltaTime * 80;
             xyz.x -= moveSpeed * 2f * Time.deltaTime * -BoolToInt(left);
             if (jumpForce_Local <= -jumpForce / 2)
             {
-
                 xyz.z = 0;
                 heroAnimationState = HeroAnimationState.站立;
                 isJumpBack = false;
-
             }
-
         }
-
     }
 
 
     void Atk_Logic()
     {
-
         if (!isAtk && !isJump && !isJumpBack && !isSkill)
         {
             canAtk = true;
@@ -541,133 +409,84 @@ public class SwordMan_ctrl : MonoBehaviour
             canAtk = false;
         }
 
-
         if (heroAnimationState != HeroAnimationState.攻击一 && heroAnimationState != HeroAnimationState.攻击二 && heroAnimationState != HeroAnimationState.攻击三)
         {
             isAtk = false;
         }
 
-
         if (canAtk && Input.GetKeyDown(KeyCode.X))
         {
-
             heroAnimationState = HeroAnimationState.攻击一;
             Sound_ctrl.PlaySound("sounds/char/Okita/sm_atk_01", false, false);
             Sound_ctrl.PlaySound("ogg/勇士/男鬼剑武器/beamswda_01", false, false);
 
             isAtk = true;
-
         }
-
-
-
-
 
         if (heroAnimationState == HeroAnimationState.攻击一 && Input.GetKeyDown(KeyCode.X) && AnimationFlag(9, 4, true))
         {
-
             heroAnimationState = HeroAnimationState.攻击二;
             Sound_ctrl.PlaySound("sounds/char/Okita/sm_atk_02", false, false);
             Sound_ctrl.PlaySound("ogg/勇士/男鬼剑武器/beamswda_02", false, false);
-
-
-
         }
         else if (heroAnimationState == HeroAnimationState.攻击一 && AnimationFlag(9, 0, false))
         {
-
             heroAnimationState = HeroAnimationState.站立;
             isAtk = false;
-
         }
         else if (heroAnimationState == HeroAnimationState.攻击二 && Input.GetKeyDown(KeyCode.X) && AnimationFlag(10, 5, true))
         {
-
             heroAnimationState = HeroAnimationState.攻击三;
             Sound_ctrl.PlaySound("sounds/char/Okita/sm_atk_03", false, false);
             Sound_ctrl.PlaySound("ogg/勇士/男鬼剑武器/beamswda_03", false, false);
-
-
-
         }
         else if (heroAnimationState == HeroAnimationState.攻击二 && AnimationFlag(10, 0, false))
         {
-
             heroAnimationState = HeroAnimationState.站立;
             isAtk = false;
-
         }
         else if (heroAnimationState == HeroAnimationState.攻击三 && AnimationFlag(8, 0, false))
         {
-
             heroAnimationState = HeroAnimationState.站立;
             isAtk = false;
-
         }
-
-
-
-
     }
-
-
     void UpperSlash_Logic()
     {
-
         if (!isJump && !isSkill)
         {
-
             canUpperSlash = true;
-
         }
         else
         {
-
             canUpperSlash = false;
-
         }
-
 
         if (Input.GetKeyDown(KeyCode.Z) && canUpperSlash)
         {
-
             heroAnimationState = HeroAnimationState.上挑;
             Sound_ctrl.PlaySound("sounds/char/Okita/sm_upslash", false, false);
             Sound_ctrl.PlaySound("ogg/勇士/男鬼剑效果/ryusim_ready", false, false);
 
-
-
             isUpperSlash = true;
             isAtk = false;
-
         }
-
 
         if (heroAnimationState == HeroAnimationState.上挑 && AnimationFlag(8, 0, false))
         {
-
             heroAnimationState = HeroAnimationState.站立;
             isUpperSlash = false;
-
         }
-
-
-
-
-
     }
 
     void TripleSlash_Logic()
     {
-
         if (!isSkill && Input.GetKeyDown(KeyCode.F))
         {
-
             heroAnimationState = HeroAnimationState.三段斩一;
             Sound_ctrl.PlaySound("sounds/char/Okitasm_triple1", false, false);
             Sound_ctrl.PlaySound("ogg/勇士/男鬼剑效果/gorecross_atk3", false, false);
 
-
             if (Input.GetKey(KeyCode.LeftArrow))
             {
                 left = true;
@@ -678,150 +497,90 @@ public class SwordMan_ctrl : MonoBehaviour
             }
         }
 
-
         if (heroAnimationState == HeroAnimationState.三段斩一 && AnimationFlag(1, 2, false))
         {
-
             GameObject ts02 = Instantiate(tripleSlash02_pre);
             ts02.transform.parent = transform;
             ts02.transform.localPosition = Vector3.zero;
             ts02.GetComponent<SpritePlayCtrl>().PlaySpriteAnimation(1, 4, AtkSpeed, left);
-
         }
-
 
         if (heroAnimationState == HeroAnimationState.三段斩一 && AnimationFlag(5, 0, false))
         {
-
             heroAnimationState = HeroAnimationState.三段斩一后摇;
-
         }
 
         if (heroAnimationState == HeroAnimationState.三段斩一后摇 && AnimationFlag(0, 1, false))
         {
-
             heroAnimationState = HeroAnimationState.站立;
-
         }
         else if (heroAnimationState == HeroAnimationState.三段斩一后摇 && Input.GetKeyDown(KeyCode.F))
         {
-
             heroAnimationState = HeroAnimationState.三段斩二;
             Sound_ctrl.PlaySound("sounds/char/Okita/sm_triple2", false, false);
             Sound_ctrl.PlaySound("ogg/勇士/男鬼剑效果/gorecross_atk3", false, false);
 
-
-
             if (Input.GetKey(KeyCode.LeftArrow))
             {
-
                 left = true;
-
             }
             else if (Input.GetKey(KeyCode.RightArrow))
             {
-
                 left = false;
-
             }
-
         }
 
         if (heroAnimationState == HeroAnimationState.三段斩二 && AnimationFlag(4, 0, false))
         {
-
             heroAnimationState = HeroAnimationState.三段斩二后摇;
-
         }
 
         if (heroAnimationState == HeroAnimationState.三段斩二后摇 && AnimationFlag(0, 1, false))
         {
-
             heroAnimationState = HeroAnimationState.站立;
-
         }
         else if (heroAnimationState == HeroAnimationState.三段斩二后摇 && Input.GetKeyDown(KeyCode.F))
         {
-
             heroAnimationState = HeroAnimationState.三段斩三;
             Sound_ctrl.PlaySound("sounds/char/Okita/sm_triple3", false, false);
             Sound_ctrl.PlaySound("ogg/勇士/男鬼剑效果/gorecross_atk3", false, false);
 
-
-
             if (Input.GetKey(KeyCode.LeftArrow))
             {
-
                 left = true;
-
             }
             else if (Input.GetKey(KeyCode.RightArrow))
             {
-
                 left = false;
-
             }
-
         }
 
         if (heroAnimationState == HeroAnimationState.三段斩三 && AnimationFlag(3, 0, false))
         {
-
             heroAnimationState = HeroAnimationState.三段斩三后摇;
-
         }
 
         if (heroAnimationState == HeroAnimationState.三段斩三后摇 && AnimationFlag(0, 1, false))
         {
-
             heroAnimationState = HeroAnimationState.站立;
-
         }
-
-
-
-
-
-
-
 
         if (heroAnimationState == HeroAnimationState.三段斩一 ||
             heroAnimationState == HeroAnimationState.三段斩二 ||
             heroAnimationState == HeroAnimationState.三段斩三
         )
         {
-
             xyz.x += moveSpeed * Time.deltaTime * -BoolToInt(left) * 4f;
-
         }
         else if (heroAnimationState == HeroAnimationState.三段斩一后摇 ||
           heroAnimationState == HeroAnimationState.三段斩二后摇 ||
           heroAnimationState == HeroAnimationState.三段斩三后摇)
         {
-
             xyz.x += moveSpeed * Time.deltaTime * -BoolToInt(left) * 0.5f;
-
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
     public void PlayAnimation(HeroAnimationState sta)
     {
-
         if (heroAnimationState_Prev != heroAnimationState && sta == HeroAnimationState.站立)
             transform.GetChild(0).GetComponent<SpritePlayCtrl>().PlaySpriteAnimation(177, 180, 5, left);
         else if (heroAnimationState_Prev != heroAnimationState && sta == HeroAnimationState.行走)
@@ -868,48 +627,29 @@ public class SwordMan_ctrl : MonoBehaviour
             transform.GetChild(0).GetComponent<SpritePlayCtrl>().PlaySpriteAnimation(204, 205, AtkSpeed / 7, left);
     }
 
-
     public int BoolToInt(bool b)
     {
-
         if (b)
         {
-
             return 1;
-
         }
         else
             return -1;
-
     }
-
 
     public bool AnimationFlag(int prev, int current, bool mode)
     {
-
         if (!mode && transform.GetChild(0).GetComponent<SpritePlayCtrl>().prevFrameIndex == prev && transform.GetChild(0).GetComponent<SpritePlayCtrl>().currentFrameIndex == current)
         {
-
             return true;
-
         }
         else if (mode && transform.GetChild(0).GetComponent<SpritePlayCtrl>().prevFrameIndex <= prev && transform.GetChild(0).GetComponent<SpritePlayCtrl>().currentFrameIndex >= current)
         {
-
             return true;
-
         }
         else
         {
-
             return false;
-
         }
-
     }
-
-
-
-
-
 }

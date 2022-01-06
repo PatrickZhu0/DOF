@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class AniInfo
 {
     private enum ANIData
@@ -42,7 +40,6 @@ public class AniInfo
         SPACEDISTORT
     }
 
-    // Token: 0x020000B8 RID: 184
     private enum DAMAGE_TYPE_Item
     {
         NORMAL,
@@ -50,14 +47,10 @@ public class AniInfo
         UNBREAKABLE
     }
 
-    // Token: 0x020000B9 RID: 185
     private enum FLIP_TYPE_Item
     {
-        // Token: 0x040004AE RID: 1198
         HORIZON = 1,
-        // Token: 0x040004AF RID: 1199
         VERTICAL,
-        // Token: 0x040004B0 RID: 1200
         ALL
     }
 
@@ -66,9 +59,6 @@ public class AniInfo
     public int imgCount = 0;
 
     public List<string> imgList;
-
-
-
 
 
 }

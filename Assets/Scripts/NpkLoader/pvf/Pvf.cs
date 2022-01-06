@@ -24,13 +24,14 @@ namespace pvfLoaderXinyu
             header = (PvfHeader)Util.readFileAsType(fs, typeof(PvfHeader));//读取pvf文件头结构体到header变量
             int headLength = header.dirTreeLength;//获取文件索引列表字节总大小
             byte[] decryptedTree = new byte[header.dirTreeLength];//分配内存
-            fs.Read(decryptedTree, 0,header.dirTreeLength);//读取文件索引列表
+            fs.Read(decryptedTree, 0, header.dirTreeLength);//读取文件索引列表
+            UnityEngine.Debug.Log((uint)header.dirTreeChecksum);
             Util.unpackHeaderTree(ref decryptedTree, header.dirTreeLength, (uint)header.dirTreeChecksum);//解密，解密后的字节数组为decryptedTree
             int pos = 0;//模拟读取字节数组的指针
             for (int i = 0; i < header.numFilesInDirTree; i++)
             {
                 HeaderTreeNode item = new HeaderTreeNode();
-                int a = item.readNodeFromBitArrStream(header,fs,decryptedTree,pos);//从pos位置开始读取HeaderTreeNode对象，返回值为指针应该偏移的字节数
+                int a = item.readNodeFromBitArrStream(header, fs, decryptedTree, pos);//从pos位置开始读取HeaderTreeNode对象，返回值为指针应该偏移的字节数
                 if (a < 0)
                     throw new Exception("读取错误，格式非法");//读取错误直接报错
                 pos += a;//指针后移
@@ -134,7 +135,7 @@ namespace pvfLoaderXinyu
                                 arr.Add(strpos, bts);
                                 strpos += bts.Length;
                             }
-                            else if(currentByte == 6 || currentByte == 8)//{指示位=`stringbin[后面的整数]`}
+                            else if (currentByte == 6 || currentByte == 8)//{指示位=`stringbin[后面的整数]`}
                             {
                                 string[] str = new string[] { "{", currentByte.ToString(), "=`", unpackSpecialChr(currentByte, after1, 0), "`}\r\n" };
                                 bts = encoding.GetBytes(string.Concat(str));

@@ -7,20 +7,29 @@ using UnityEngine;
 
 public class PvfTest : MonoBehaviour
 {
-    static string pvfFilename = "C:/Users/unknown/Desktop/Documents/DNFTools/Script.pvf";
+    public string filePath;
+    public string pvfFilename;
     // Start is called before the first frame update
     void Start()
     {
+        //pvfFilename = "C:\\Users\\unknown\\Desktop\\Documents\\DNFTools\\Script.pvf";
         //var pvf = new Pvf(pvfFilename);//初始化pvf文件，进行读取操作
 
-        ////string fileContent = pvf.getPvfFileByPath("character/swordman/swordman.chr", Encoding.UTF8); 
+        //string fileContent = pvf.getPvfFileByPath("character/swordman/swordman.chr", Encoding.UTF8); 
 
-        //string stayContent = pvf.unpackAniFileByPath("character/fighter/animation/attack2.ani");
+        ////string stayContent = pvf.unpackAniFileByPath("character/fighter/animation/attack2.ani");
 
-        //pvf.dispose();//不用了就释放掉
-        //Debug.LogError(stayContent);
+        ////pvf.dispose();//不用了就释放掉
+        //Debug.LogError(fileContent);
 
         //BinaryAniCompiler.LoadAni("");
+
+        filePath = Application.dataPath + "/../PvfRoot/character/swordman/swordman.chr";
+        BinaryAniCompiler.LoadChr(filePath);
+
+        //filePath = Application.dataPath + "/../PvfRoot/stringtable.bin";
+        //BinaryAniCompiler.loadStringTableBin(filePath);
+
     }
 
     // Update is called once per frame
