@@ -56,8 +56,8 @@ namespace Extract1
                         b = (byte)((bf[0] & 0xf) << 4);
                         break;
                 }
-            }        
-            target[index] = new Color32(r,g,b,a);
+            }
+            target[index] = new Color32(r, g, b, a);
         }
 
         public static void ReadColor(Stream stream, ColorBits bits, Color32[] target, int offset)

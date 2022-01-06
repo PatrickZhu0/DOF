@@ -10,23 +10,12 @@ public static class Loader
 {
     public static void LoadSprites(string fileName)
     {
-
-        // List<Album> albums = NpkCoder.Load(Application.streamingAssetsPath + "\\NPK\\sprite_character_swordman_equipment_avatar_skin.npk");
-        //List<Album> albums = NpkCoder.Load(Application.streamingAssetsPath + "\\NPK\\sprite_character_swordman_atequipment_avatar_skin.npk");
-
         List<Album> albums = NpkCoder.Load(Application.streamingAssetsPath + string.Format("\\NPK\\{0}.npk",fileName));
 
         Album saber = albums[0];
 
 
-        foreach(var picture in albums)
-        {
-
-        }
-
         Picture entity = saber.List[0];
-
         Sprite sp = Sprite.Create(entity.Texture, new Rect(0, 0, entity.Width, entity.Height), Vector2.zero);
-
     }
 }

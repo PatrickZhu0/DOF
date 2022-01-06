@@ -25,8 +25,10 @@ namespace Extract1
 
         private static byte[] key;
 
-        private static byte[] Key {
-            get {
+        private static byte[] Key
+        {
+            get
+            {
                 if (key != null)
                 {
                     return key;
@@ -218,7 +220,7 @@ namespace Extract1
         #endregion
 
 
-      
+
         public static List<Album> Find(IEnumerable<Album> Items, params string[] args)
         {
             return Find(Items, false, args);
@@ -226,7 +228,8 @@ namespace Extract1
 
         public static List<Album> Find(IEnumerable<Album> Items, bool allCheck, params string[] args)
         {
-            var list = new List<Album>(Items.Where(item => {
+            var list = new List<Album>(Items.Where(item =>
+            {
                 if (!allCheck && args.Length == 0)
                 {
                     return true;
@@ -350,6 +353,6 @@ namespace Extract1
 
         #endregion
 
-        
+
     }
 }

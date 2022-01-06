@@ -219,7 +219,7 @@ public class BinaryAniCompiler
 
     public static void LoadAni(string filePath, ref FAnimSystem.FAnimNode fAnimNode)
     {
-        filePath = Application.dataPath + "/../PvfRoot/character/fighter/animation/rest.ani";
+        //filePath = Application.dataPath + "/../PvfRoot/character/fighter/animation/rest.ani";
         StringBuilder sb = new StringBuilder();
         using (FileStream st = File.OpenRead(filePath))
         {
@@ -254,16 +254,10 @@ public class BinaryAniCompiler
                 switch (globalType)
                 {
                     case (int)ANIData.SHADOW:
-                        sb.Append("   [SHADOW]\r\n");
-                        //byte globalParamValue = br.ReadByte
                         byte shadow = br.ReadByte();
-                        sb.AppendFormat("   {0}\r\n", shadow);
                         break;
                     case (int)ANIData.LOOP:
-                        sb.Append("   [LOOP]\r\n");
-                        //byte globalParamValue = br.ReadByte
                         byte loop = br.ReadByte();
-                        sb.AppendFormat("   {0}\r\n", loop);
                         break;
                 }
             }
@@ -287,19 +281,15 @@ public class BinaryAniCompiler
                     switch (boxType)
                     {
                         case (int)ANIData.DAMAGE_BOX:
-                            //目前只发现两种，切参数一致
                             for (int j = 0; j < 6; j++)
                             {
                                 int boxParam2 = br.ReadInt32();
-
                             }
                             break;
                         case (int)ANIData.ATTACK_BOX:
-                            //目前只发现两种，切参数一致
                             for (int j = 0; j < 6; j++)
                             {
                                 int boxParam2 = br.ReadInt32();
-
                             }
                             break;
                     }
@@ -335,36 +325,24 @@ public class BinaryAniCompiler
                         case (int)ANIData.PLAY_SOUND:
                             int length = br.ReadInt32();
                             char[] name = br.ReadChars(length);
-                            sb.Append("   [PLAY_SOUND]\r\n");
-                            sb.AppendFormat("   '{0}'\r\n", new string(name));
                             break;
                         case (int)ANIData.IMAGE_RATE:
                             float rate1 = br.ReadSingle();
                             float rate2 = br.ReadSingle();
-                            sb.Append("   [IMAGE_RATE]\r\n");
-                            sb.AppendFormat("   {0}, {1}\r\n", rate1, rate2);
                             break;
                         case (int)ANIData.IMAGE_ROTATE:
                             float ratate = br.ReadSingle();
-                            sb.Append("   [IMAGE_RATE]\r\n");
-                            sb.AppendFormat("   {0}\r\n", ratate);
                             break;
                         case (int)ANIData.INTERPOLATION:
                             byte interpolation = br.ReadByte();
-                            sb.Append("   [INTERPOLATION]\r\n");
-                            sb.AppendFormat("   {0}\r\n", interpolation);
                             break;
                         case (int)ANIData.GRAPHIC_EFFECT:
                             var effectType = br.ReadInt16();
-                            sb.Append("   [GRAPHIC_EFFECT]\r\n");
-                            sb.AppendFormat("   '{0}'\r\n", (Effect_Item)effectType);
                             break;
                     }
                 }
                 fAnimNode.Frames.Add(fFrame);
             }
-
         }
-        Debug.LogError(sb.ToString());
     }
 }

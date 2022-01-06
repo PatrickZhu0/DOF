@@ -38,9 +38,9 @@ namespace Extract1
 
 
         [DllImport("zlib1.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "compress")]
-        private static extern int Compress([In] [Out] byte[] dest, ref int destLen, byte[] source, int sourceLen);
+        private static extern int Compress([In][Out] byte[] dest, ref int destLen, byte[] source, int sourceLen);
 
         [DllImport("zlib1.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "uncompress")]
-        private static extern int Decompress([In] [Out] byte[] dest, ref int destLen, byte[] source, int sourceLen);
+        private static extern int Decompress([In][Out] byte[] dest, ref int destLen, byte[] source, int sourceLen);
     }
 }

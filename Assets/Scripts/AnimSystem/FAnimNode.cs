@@ -87,11 +87,14 @@ namespace FAnimSystem
         List<string> imgNames;
         List<FFrame> frames;
 
+        List<Sprite> sprites;
+
         #endregion
 
         public int FrameMax { get => frameMax; set => frameMax = value; }
         public List<string> ImgNames { get => imgNames; set => imgNames = value; }
         public List<FFrame> Frames { get => frames; set => frames = value; }
+        public List<Sprite> Sprites { get => sprites; set => sprites = value; }
 
         int curFrameIdx = 0;
         public FFrame getCurFrame()

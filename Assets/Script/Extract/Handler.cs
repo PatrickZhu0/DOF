@@ -79,9 +79,12 @@ namespace Extract1
             var ms = new MemoryStream(data);
             int length = size.Width * size.Height;
             Color32[] color32s = new Color32[length];
-            for (var i = length - 1; i >= 0; i--)
-            {
-                Colors.ReadColor(ms, bits, color32s, i);
+            for (var i = size.Height - 1; i >= 0; i--)
+            { 
+                for (var j = 0; j < size.Width; j++)
+                {
+                    Colors.ReadColor(ms, bits, color32s, i * size.Width + j);
+                }
             }
             ms.Close();
             texture.SetPixels32(color32s);

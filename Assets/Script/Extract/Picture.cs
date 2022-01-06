@@ -40,7 +40,7 @@ namespace Extract1
         /// <summary>
         ///     贴图坐标
         /// </summary>
-        public IntVec2 Location = new IntVec2(0,0);
+        public IntVec2 Location = new IntVec2(0, 0);
 
         /// <summary>
         ///     存储该贴图的img
@@ -72,8 +72,10 @@ namespace Extract1
         /// <summary>
         ///     贴图内容
         /// </summary>
-        public Texture2D Texture {
-            get {
+        public Texture2D Texture
+        {
+            get
+            {
                 if (Type == ColorBits.LINK)
                 {
                     return Target?.Texture;
@@ -84,43 +86,50 @@ namespace Extract1
                 }
                 return _image = Parent.ConvertToTexture2D(this); //使用父容器解析
             }
-            set {
+            set
+            {
                 _image = value;
                 if (value != null)
                 {
-                    Size = new IntVec2(value.width,value.height);
+                    Size = new IntVec2(value.width, value.height);
                 }
             }
         }
 
         public bool IsOpen => _image != null;
 
-        public int X {
+        public int X
+        {
             set => Location.X = value;
             get => Location.X;
         }
 
-        public int Y {
+        public int Y
+        {
             set => Location.Y = value;
             get => Location.Y;
         }
 
-        public int Width {
+        public int Width
+        {
             set => Size.X = value;
             get => Size.X;
         }
 
-        public int Height {
+        public int Height
+        {
             set => Size.Y = value;
             get => Size.Y;
         }
 
-        public int CanvasWidth {
+        public int CanvasWidth
+        {
             set => CanvasSize = new IntVec2(value, CanvasHeight);
             get => CanvasSize.X;
         }
 
-        public int CanvasHeight {
+        public int CanvasHeight
+        {
             set => CanvasSize = new IntVec2(CanvasWidth, value);
             get => CanvasSize.Y;
         }

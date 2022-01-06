@@ -57,7 +57,8 @@ namespace Extract1
         /// </summary>
         public string Path { set; get; } = string.Empty;
 
-        public string Name {
+        public string Name
+        {
             get => "";
             set => Path = Path.Replace(Name, value);
         }
@@ -70,8 +71,10 @@ namespace Extract1
         /// <summary>
         ///     色表索引
         /// </summary>
-        public int TableIndex {
-            set {
+        public int TableIndex
+        {
+            set
+            {
                 if (_tabindex != value)
                 {
                     Refresh();
@@ -89,8 +92,10 @@ namespace Extract1
             List.ForEach(e => e.Texture = null);
         }
 
-        public List<Color32> CurrentTable {
-            get {
+        public List<Color32> CurrentTable
+        {
+            get
+            {
                 if (TableIndex > -1 && TableIndex < Tables.Count)
                 {
                     return Tables[TableIndex];
@@ -110,9 +115,11 @@ namespace Extract1
         /// </summary>
         public Album Target { set; get; }
 
-        public Picture this[int index] {
+        public Picture this[int index]
+        {
             get => List[index];
-            set {
+            set
+            {
                 if (index < List.Count)
                 {
                     List[index] = value;
@@ -170,15 +177,5 @@ namespace Extract1
         {
             return Handler.ConvertToTexture2D(entity);
         }
-
-        ///// <summary>
-        /////     转储为字节数组
-        ///// </summary>
-        ///// <param name="entity"></param>
-        ///// <returns></returns>
-        //public byte[] ConvertToByte(Picture entity)
-        //{
-        //    return Handler.ConvertToByte(entity);
-        //}
     }
 }
