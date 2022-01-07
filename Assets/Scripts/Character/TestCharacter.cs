@@ -58,14 +58,21 @@ public class TestCharacter : MonoBehaviour
 
     double lastTime = 0;
     FFrame frame;
+    float time = 0.0f;
     void Update()
     {
-        double curTime = (DateTime.Now.ToUniversalTime().Ticks - 621355968000000000) / 10000;
-        if (lastTime == 0 || (curTime - lastTime) >= frame.Delay)
+        //double curTime = (DateTime.Now.ToUniversalTime().Ticks - 621355968000000000) / 10000;
+        float curTime = (Time.time * 100);
+        Debug.Log(curTime);
+
+        //if (lastTime == 0 || (curTime - lastTime) >= frame.Delay)
+        if (time == 0f || time >= frame.Delay)
         {
-            lastTime = curTime;
+            //lastTime = curTime;
+            time = 0f;
             frame = fAnimNode.getCurFrame();
         }
+        time += Time.deltaTime;
         spriteRenderer.sprite = spriteArray.sprites[frame.ImgFrameIdx];
 
         if (Input.GetKeyDown(KeyCode.A))
@@ -103,37 +110,75 @@ public class TestCharacter : MonoBehaviour
             SetAni(aniPath);
         }
 
+        DebugDraw();
     }
 
-    void OnGUI()
+    void DebugDraw()
     {
         if (frame == null)
             return;
 
         foreach (Rect rect in frame.DamageBoxXY)
         {
-            //EditorGUITools.DrawRect(rect, Color.cyan);
             DebugDarwRect(rect, Color.cyan);
         }
 
         foreach (Rect rect in frame.DamageBoxXZ)
         {
-            //EditorGUITools.DrawRect(rect, Color.green);
             DebugDarwRect(rect, Color.green);
         }
 
         foreach (Rect rect in frame.AttackBoxXY)
         {
-            //EditorGUITools.DrawRect(rect, Color.red);
             DebugDarwRect(rect, Color.magenta);
         }
 
         foreach (Rect rect in frame.AttackBoxXZ)
         {
-            //EditorGUITools.DrawRect(rect, Color.magenta);
             DebugDarwRect(rect, Color.red);
         }
     }
+
+
+    void OnDrawGizmos()
+    {
+        if (frame == null)
+            return;
+
+        //foreach (Rect rect in frame.DamageBoxXY)
+        //{
+        //    GizmosDarwRect(rect, Color.cyan);
+        //}
+
+        //foreach (Rect rect in frame.DamageBoxXZ)
+        //{
+        //    GizmosDarwRect(rect, Color.green);
+        //}
+
+        //foreach (Rect rect in frame.AttackBoxXY)
+        //{
+        //    GizmosDarwRect(rect, Color.magenta);
+        //}
+
+        //foreach (Rect rect in frame.AttackBoxXZ)
+        //{
+        //    GizmosDarwRect(rect, Color.red);
+        //}
+    }
+
+    void GizmosDarwRect(Rect rect, Color color)
+    {
+        Gizmos.color = color;
+        //lian(AB)
+        Gizmos.DrawLine(rect.min, new Vector2(rect.xMax, rect.yMin));
+        //lian(AD)
+        Gizmos.DrawLine(rect.min, new Vector2(rect.xMin, rect.yMax));
+        //lian(CB)
+        Gizmos.DrawLine(rect.max, new Vector2(rect.xMax, rect.yMin));
+        //lian(CD)
+        Gizmos.DrawLine(rect.max, new Vector2(rect.xMin, rect.yMax));
+    }
+
 
     void DebugDarwRect(Rect rect, Color color)
     {
@@ -146,5 +191,4 @@ public class TestCharacter : MonoBehaviour
         //lian(CD)
         Debug.DrawLine(rect.max, new Vector2(rect.xMin, rect.yMax), color);
     }
-
 }
