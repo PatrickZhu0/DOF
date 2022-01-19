@@ -59,21 +59,24 @@ public class TestCharacter : MonoBehaviour
     double lastTime = 0;
     FFrame frame;
     float time = 0.0f;
-    void Update()
-    {
-        //double curTime = (DateTime.Now.ToUniversalTime().Ticks - 621355968000000000) / 10000;
-        float curTime = (Time.time * 100);
-        Debug.Log(curTime);
 
-        //if (lastTime == 0 || (curTime - lastTime) >= frame.Delay)
+
+    private void FixedUpdate()
+    {
         if (time == 0f || time >= frame.Delay)
         {
-            //lastTime = curTime;
             time = 0f;
             frame = fAnimNode.getCurFrame();
         }
-        time += Time.deltaTime;
+        time += (Time.deltaTime * 1000);
         spriteRenderer.sprite = spriteArray.sprites[frame.ImgFrameIdx];
+    }
+
+
+    void Update()
+    {
+        //double curTime = (DateTime.Now.ToUniversalTime().Ticks - 621355968000000000) / 10000;
+
 
         if (Input.GetKeyDown(KeyCode.A))
         {
