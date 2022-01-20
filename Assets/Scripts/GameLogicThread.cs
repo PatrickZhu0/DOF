@@ -19,7 +19,7 @@ public class GameLogicThread
         {
             //NetworkSystem.Instance.Tick();
             //LobbyNetworkSystem.Instance.Tick();
-            //PlayerControl.Instance.Tick();
+            PlayerControl.Instance.Tick();
             WorldSystem.Instance.Tick();
         }
 
