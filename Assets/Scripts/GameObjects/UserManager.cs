@@ -43,4 +43,8 @@ public sealed class UserManager
         return new UserInfo(resId);
     }
 
+    internal UserInfo GetUserInfo(int objId)
+    {
+        throw new NotImplementedException();
+    }
 }

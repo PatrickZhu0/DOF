@@ -54,23 +54,64 @@ public class CharacterInfo : IShootTarget
         public int m_NpDamage;
     }
 
+    #region Fields
+
     protected int m_Id = 0;
-    //单位ID，在地图中赋予的id，用于剧情查找
+    /// <summary>
+    /// 单位ID，在地图中赋予的id，用于剧情查找
+    /// </summary>
     protected int m_UnitId = 0;
     protected int m_LinkId = 0;
     protected int m_OwnerId = -1;
     protected string m_Name = "";
     protected int m_Level = 1;
 
+    protected float m_Combat2IdleTime = 3;
+    protected int m_Combat2IdleSkill = 0;
+    protected string m_Idle2CombatWeaponMoves = "";
+
+    private bool m_LevelChanged = false;
+    private int m_Hp = 0;
+    private int m_Rage = 0;
+    private int m_Energy = 0;
+    private float m_HpMaxCoefficient = 1;
+    private float m_EnergyMaxCoefficient = 1;
+    private float m_AttackRangeCoefficient = 1;
+    private float m_VelocityCoefficient = 1;
+    private float m_ViewRange = 0;
+    private float m_GohomeRange = 0;
+    private bool m_GfxDead = false;
+    private bool m_SuperArmor = false;  // 可被破除的霸体
+    private bool m_UltraArmor = false;  // 不可被破除的霸体
+    private bool m_IsArmorChanged = true;
+    protected string m_Model = "";
+    protected string m_BornEffect = "";
+
+
     protected bool m_AIEnable = true;
+
+    private long m_ReleaseTime = 0;  //尸体存在时间
+    private long m_EmptyBloodTime = 0;
+    private long m_DeadTime = 0;
+    protected bool m_CauseStiff = true;
+    protected bool m_AcceptStiff = true;
+    protected bool m_AcceptStiffEffect = true;
 
     //基础属性值
     protected CharacterProperty m_BaseProperty;
     //当前属性值
     protected CharacterProperty m_ActualProperty;
 
-    //尸体存在时间
-    private long m_ReleaseTime = 0;
+    private MovementStateInfo m_MovementStateInfo = new MovementStateInfo();
+
+    #endregion
+
+    #region Properties
+    public int Hp { get => m_Hp; }
+    public long DeadTime { get => m_DeadTime; set => m_DeadTime = value; }
+
+
+    #endregion
 
     /// <summary>
     /// 构造函数
@@ -104,5 +145,12 @@ public class CharacterInfo : IShootTarget
     public int GetUnitId()
     {
         return m_UnitId;
+    }
+
+
+
+    public MovementStateInfo GetMovementStateInfo()
+    {
+        return m_MovementStateInfo;
     }
 }
