@@ -63,18 +63,13 @@ public static class FileReaderProxy
 
 }
 
-public class Anim
+public class AnimConfig
 {
-
-    /// <summary>
-    ///  文件名
-    /// </summary>
     private string m_FileName;
 
-    /// <summary>
-    /// 文件大小
-    /// </summary>
     private long m_FileSize;
+
+
 
     public bool Load(string path)
     {
@@ -148,26 +143,17 @@ public class Anim
         int frameMax = br.ReadInt16();
 
 
-        return true;
-    }
-
-    /**
-        * @brief 将字符串解析为字符串数组
-        *
-        * @param vec 字符串,类似于"100,200,200"
-        *
-        * @return 
-        */
-    private static List<string> ConvertStringList(string vec, string[] split)
-    {
-        string[] resut = vec.Split(split, StringSplitOptions.None);
-        List<string> list = new List<string>();
-        foreach (string str in resut)
+        //两字节 引用img文件个数
+        int imgCount = br.ReadInt16();
+        for (int i = 0; i < imgCount; i++)
         {
-            list.Add(str);
+            //四字节 img路径名长度
+            int imgNameLength = br.ReadInt32();
+            //按长度读取字符
+            char[] imgName = br.ReadChars(imgNameLength);
         }
 
-        return list;
-    }
 
+        return true;
+    }
 }
