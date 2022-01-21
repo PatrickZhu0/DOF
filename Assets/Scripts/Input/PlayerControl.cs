@@ -207,13 +207,13 @@ class PlayerMovement
         KeyHit kh = KeyHit.None;
         if (move_enable)
         {
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.UpArrow))
                 kh |= KeyHit.Up;
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.LeftArrow))
                 kh |= KeyHit.Left;
-            if (Input.GetKey(KeyCode.S))
+            if (Input.GetKey(KeyCode.DownArrow))
                 kh |= KeyHit.Down;
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.RightArrow))
                 kh |= KeyHit.Right;
         }
 

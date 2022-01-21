@@ -21,7 +21,8 @@ public sealed class UserManager
         m_UserPoolSize = poolSize;
     }
 
-    public LinkedListDictionary<int, UserInfo> Users {
+    public LinkedListDictionary<int, UserInfo> Users
+    {
         get { return m_Users; }
     }
 
@@ -43,8 +44,8 @@ public sealed class UserManager
         return new UserInfo(resId);
     }
 
-    internal UserInfo GetUserInfo(int objId)
+    public UserInfo GetUserInfo(int objId)
     {
-        throw new NotImplementedException();
+        return new UserInfo((int)objId);
     }
 }

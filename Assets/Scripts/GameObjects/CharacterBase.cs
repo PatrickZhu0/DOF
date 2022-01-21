@@ -87,8 +87,9 @@ public class CharacterInfo : IShootTarget
     protected string m_Model = "";
     protected string m_BornEffect = "";
 
-
     protected bool m_AIEnable = true;
+    protected List<int> m_ActionList = new List<int>();
+    private int m_CampId = 0;
 
     private long m_ReleaseTime = 0;  //尸体存在时间
     private long m_EmptyBloodTime = 0;
@@ -152,5 +153,38 @@ public class CharacterInfo : IShootTarget
     public MovementStateInfo GetMovementStateInfo()
     {
         return m_MovementStateInfo;
+    }
+
+    public CharacterProperty GetBaseProperty()
+    {
+        return m_BaseProperty;
+    }
+
+    public CharacterProperty GetActualProperty()
+    {
+        return m_ActualProperty;
+    }
+
+    public List<int> GetActionList()
+    {
+        return m_ActionList;
+    }
+
+    /// <summary>
+    /// 获取模型名
+    /// </summary>
+    /// <returns></returns>
+    public string GetModel()
+    {
+        return m_Model;
+    }
+
+    /// <summary>
+    ///  设置模型名
+    /// </summary>
+    /// <param name="model"></param>
+    public void SetModel(string model)
+    {
+        m_Model = model;
     }
 }

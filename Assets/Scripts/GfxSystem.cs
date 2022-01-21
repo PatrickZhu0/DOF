@@ -51,4 +51,20 @@ public sealed partial class GfxSystem
     {
         return s_Instance.GetMouseRayPointZImpl();
     }
+
+    public static void UpdateGameObjectLocalPosition2D(int id, float x, float z)
+    {
+        UpdateGameObjectLocalPosition2D(id, x, z, true);
+    }
+
+    public static void UpdateGameObjectLocalPosition2D(int id, float x, float z, bool attachTerrain)
+    {
+       s_Instance.UpdateGameObjectLocalPosition2DImpl(id, x, z, attachTerrain);
+    }
+
+
+    public static void CreateGameObject(int id, string resource, SharedGameObjectInfo info)
+    {
+        s_Instance.CreateGameObjectImpl( id, resource, info);
+    }
 }

@@ -60,25 +60,40 @@ public class WorldSystem
     public void StartGame()
     {
         //m_SceneStartTime = TimeUtility.GetServerMilliseconds();
-        UserInfo user = GetPlayerSelf();
-        if (null != user)
+        UserInfo userInfo = GetPlayerSelf();
+        if (null != userInfo)
         {
             //EntityManager.Instance.DestroyUserView(user.GetId());
             //DestroyCharacterById(user.GetId());
         }
-        user = CreatePlayerSelf(1, 1);
+        userInfo = CreatePlayerSelf(1, 1);
         //user.SetAIEnable(true);
-        user.GetMovementStateInfo().SetPosition(1, 1, 1);
+        userInfo.GetMovementStateInfo().SetPosition(1, 1, 1);
         //user.GetMovementStateInfo().SetFaceDir(unit.m_RotAngle);
         //user.SetHp(Operate_Type.OT_Absolute, 100);
         //user.SetEnergy(Operate_Type.OT_Absolute, user.GetActualProperty().EnergyMax);
 
+        EntityManager.Instance.CreatePlayerSelfView(1);
+        UserView userView = EntityManager.Instance.GetUserViewById(1);
+
+
     }
 
+    internal CharacterInfo GetCharacterById(int m_ObjId)
+    {
+        throw new NotImplementedException();
+    }
 
-
+    bool inited = false;
     public void Tick()
     {
+        if (!inited)
+        {
+            StartGame();
+            inited = true;
+        }
+
+
         TickUsers();
 
     }

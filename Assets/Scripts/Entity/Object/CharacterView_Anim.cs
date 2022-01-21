@@ -45,12 +45,24 @@ public delegate void AnimationStopCallback(string anim_name);
 public partial class CharacterView
 {
     protected bool m_IsCombatState = false;
+    //protected Data_ActionConfig m_CurActionConfig = null;
 
     protected CharacterAnimationInfo m_CharacterAnimationInfo = new CharacterAnimationInfo();
     protected IdleState m_IdleState = IdleState.kNotIdle;
     protected long m_BeginIdleTime = 0;
     protected long m_IdleInterval = 0;
 
+    protected virtual CharacterInfo GetOwner() { return null; }
+
+    protected void InitAnimationSets()
+    {
+        List<int> action_list = GetOwner().GetActionList();
+        //for (int i = 0; i < action_list.Count; i++)
+        //{
+        //    m_CurActionConfig = ActionConfigProvider.Instance.GetDataById(action_list[i]);
+        //    m_ObjectInfo.AnimConfigId = action_list[i];
+        //}
+    }
 
 
 }

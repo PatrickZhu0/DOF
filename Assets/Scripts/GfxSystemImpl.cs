@@ -61,6 +61,7 @@ public sealed partial class GfxSystem
 
     private GfxSystem() { }
 
+
     //初始化阶段调用的函数
     private void InitImpl()
     {
@@ -79,5 +80,143 @@ public sealed partial class GfxSystem
     }
 
 
+    internal GameObject GetGameObject(int id)
+    {
+        GameObject ret = null;
+        if (m_GameObjects.Contains(id))
+            ret = m_GameObjects[id].ObjectInstance;
+        return ret;
+    }
 
+    private int GetGameObjectId(GameObject obj)
+    {
+        int ret = 0;
+        if (m_GameObjectIds.ContainsKey(obj))
+        {
+            ret = m_GameObjectIds[obj];
+        }
+        return ret;
+    }
+
+    internal SharedGameObjectInfo GetSharedGameObjectInfo(int id)
+    {
+        SharedGameObjectInfo ret = null;
+        if (m_GameObjects.Contains(id))
+            ret = m_GameObjects[id].ObjectInfo;
+        return ret;
+    }
+    internal SharedGameObjectInfo GetSharedGameObjectInfo(GameObject obj)
+    {
+        int id = GetGameObjectId(obj);
+        return GetSharedGameObjectInfo(id);
+    }
+    internal bool ExistGameObject(GameObject obj)
+    {
+        int id = GetGameObjectId(obj);
+        return id > 0;
+    }
+
+
+
+    private void UpdateGameObjectLocalPosition2DImpl(int id, float x, float z, bool attachTerrain)
+    {
+        GameObject obj = GetGameObject(id);
+        if (null != obj)
+        {
+            float y = 0;
+            //if (attachTerrain)
+            //    y = SampleTerrainHeight(x, z);
+            //else
+            //    y = obj.transform.localPosition.y;
+            y = obj.transform.localPosition.y;
+            obj.transform.localPosition = new Vector3(x, y, z);
+        }
+    }
+
+    private void RememberGameObject(int id, GameObject obj)
+    {
+        RememberGameObject(id, obj, null);
+    }
+
+    private void RememberGameObject(int id, GameObject obj, SharedGameObjectInfo info)
+    {
+        if (m_GameObjects.Contains(id))
+        {
+            GameObject oldObj = m_GameObjects[id].ObjectInstance;
+            oldObj.SetActive(false);
+            m_GameObjectIds.Remove(oldObj);
+            GameObject.Destroy(oldObj);
+            m_GameObjects[id] = new GameObjectInfo(obj, info);
+        }
+        else
+        {
+            m_GameObjects.AddLast(id, new GameObjectInfo(obj, info));
+        }
+        if (null != info)
+        {
+            if (!info.m_SkinedMaterialChanged)
+            {
+                SkinnedMeshRenderer[] renderers = obj.GetComponentsInChildren<SkinnedMeshRenderer>();
+                foreach (SkinnedMeshRenderer renderer in renderers)
+                {
+                    info.m_SkinedOriginalMaterials.Add(renderer.materials);
+                }
+            }
+            if (!info.m_MeshMaterialChanged)
+            {
+                MeshRenderer[] renderers = obj.GetComponentsInChildren<MeshRenderer>();
+                foreach (MeshRenderer renderer in renderers)
+                {
+                    info.m_MeshOriginalMaterials.Add(renderer.materials);
+                }
+            }
+        }
+        m_GameObjectIds.Add(obj, id);
+    }
+
+    private void ForgetGameObject(int id, GameObject obj)
+    {
+        SharedGameObjectInfo info = GetSharedGameObjectInfo(id);
+        if (null != info)
+        {
+            info.m_SkinedOriginalMaterials.Clear();
+            info.m_MeshOriginalMaterials.Clear();
+        }
+        m_GameObjects.Remove(id);
+        m_GameObjectIds.Remove(obj);
+    }
+
+    private void CreateGameObjectImpl(int id, string resource, SharedGameObjectInfo info)
+    {
+        if (null != info)
+        {
+            try
+            {
+                Vector3 pos = new Vector3(info.X, info.Y, info.Z);
+                //if (!info.IsFloat)
+                //    pos.y = SampleTerrainHeight(pos.x, pos.z);
+                //Quaternion q = Quaternion.Euler(0, RadianToDegree(info.FaceDir), 0);
+                GameObject obj = ResourceManager.Instance.NewObject(resource) as GameObject;
+                if (null != obj)
+                {
+                    if (null != obj.transform)
+                    {
+                        obj.transform.position = pos;
+                        //obj.transform.localRotation = q;
+                        obj.transform.localScale = new Vector3(info.Sx, info.Sy, info.Sz);
+                    }
+                    RememberGameObject(id, obj, info);
+                    obj.SetActive(true);
+                }
+                else
+                {
+                    //CallLogicErrorLog("CreateGameObject {0} can't load resource", resource);
+                }
+            }
+            catch (Exception ex)
+            {
+                //CallGfxErrorLog("CreateGameObject {0} throw exception:{1}\n{2}", resource, ex.Message, ex.StackTrace);
+            }
+        }
+    }
 }

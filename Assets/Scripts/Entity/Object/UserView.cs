@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using UnityEngine;
 
 public class UserView : CharacterView
 {
@@ -12,13 +12,57 @@ public class UserView : CharacterView
     private bool m_IndicatorVisible = false;
     private int m_IndicatorTargetType = 1;
 
-    internal void Create(UserInfo obj)
+    protected override CharacterInfo GetOwner()
     {
-        throw new NotImplementedException();
+        return m_User;
     }
 
-    internal void Update()
+    public void Create(UserInfo user)
     {
-        throw new NotImplementedException();
+        //Init();
+        if (null != user)
+        {
+            m_User = user;
+            //ObjectInfo.CampId = m_User.GetCampId();
+            MovementStateInfo msi = m_User.GetMovementStateInfo();
+            Vector3 pos = msi.GetPosition3D();
+            float dir = msi.GetFaceDir();
+            CreateActor(m_User.GetId(), "Swordman", pos, dir);
+
+            //CreateActor(m_User.GetId(), m_User.GetModel(), pos, dir);
+            //CreateIndicatorActor(m_User.GetId(), m_User.GetIndicatorModel());
+            InitAnimationSets();
+            ObjectInfo.IsPlayer = true;
+            //if (user.GetId() == WorldSystem.Instance.PlayerSelfId)
+            //{
+            //    GfxSystem.MarkPlayerSelf(Actor);
+            //}
+        }
+    }
+
+    public void Update()
+    {
+        //UpdateAttr();
+        //UpdateSpatial();
+        UpdateAnimation();
+        //UpdateIndicator();
+    }
+
+    private void UpdateAnimation()
+    {
+        //if (!CanAffectPlayerSelf) return;
+        //if (null != m_User)
+        //{
+        //    UpdateState();
+        //    if (ObjectInfo.IsGfxAnimation)
+        //    {
+        //        m_CharacterAnimationInfo.Reset();
+        //        m_IdleState = IdleState.kNotIdle;
+        //        return;
+        //    }
+        //    UpdateMoveAnimation();
+        //    UpdateDead();
+        //    UpdateIdle();
+        //}
     }
 }
