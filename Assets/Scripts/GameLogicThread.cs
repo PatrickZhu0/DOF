@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//¼ÙµÄÏß³Ì£¬·½±ãÒÔºó¸ÄÎªÏß³Ì
+//ï¿½Ùµï¿½ï¿½ß³Ì£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôºï¿½ï¿½Îªï¿½ß³ï¿½
 public class GameLogicThread
 {
     private long m_LastLogTime = 0;

@@ -9,17 +9,24 @@ public class GameLogic : MonoBehaviour
 
     private bool m_IsInit = false;
 
+    private float AccumilatedTime = 0f;
+    private float FrameLength = 0.05f; //50 miliseconds
 
+    //called once per unity frame
+    internal void Update() {
+        //Basically same logic as FixedUpdate, but we can scale it by adjusting FrameLength
+        AccumilatedTime = AccumilatedTime + Time.deltaTime;
 
-    internal void FixedUpdate()
-    {
-        s_LogicThread.OnTick();
+        //in case the FPS is too slow, we may need to update the game multiple times a frame
+        while(AccumilatedTime > FrameLength) {
+            s_LogicThread.OnTick();
+            AccumilatedTime = AccumilatedTime - FrameLength;
+        }
     }
-
-
 
     internal void Update()
     {
+        
         //UnityEngine.Debug.Log("CurScene:" + Application.loadedLevelName);
         try
         {

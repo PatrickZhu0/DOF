@@ -1,15 +1,15 @@
 112
-"Swordman/TripleStab.skl" ¹íÓ°Èý»÷½£
+"Swordman/TripleStab.skl" ï¿½ï¿½Ó°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 115
-"Swordman/GhostSideWindEx.skl" ¹íÓ°±ÞEX
+"Swordman/GhostSideWindEx.skl" ï¿½ï¿½Ó°ï¿½ï¿½EX
 116
-"Swordman/TripleStabEx.skl" ¹íÓ°Èý»÷½£EX
+"Swordman/TripleStabEx.skl" ï¿½ï¿½Ó°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½EX
 139
-"Swordman/PinchPowerUpEx.skl" ÑªÆø»½ÐÑEX
+"Swordman/PinchPowerUpEx.skl" Ñªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½EX
 140
-"Swordman/NormalWaveEx.skl" µØÁÑ²¨¶¯½£EX
+"Swordman/NormalWaveEx.skl" ï¿½ï¿½ï¿½Ñ²ï¿½ï¿½ï¿½ï¿½ï¿½EX
 141
-"Swordman/GoreCrossEx.skl" Ê®×ÖÕ¶EX
+"Swordman/GoreCrossEx.skl" Ê®ï¿½ï¿½Õ¶EX
 142
 "Swordman/HardAttackEx.skl"
 143
@@ -29,197 +29,197 @@
 150
 "Swordman/DOTAreaEx.skl"
 1
-"Swordman/Guard.skl" ¸ñµ²
+"Swordman/Guard.skl" ï¿½ï¿½
 2
-"Swordman/ReflectGuard.skl" ¹íÓ¡Öé
+"Swordman/ReflectGuard.skl" ï¿½ï¿½Ó¡ï¿½ï¿½
 3
-"Swordman/AutoGuard.skl" ×Ô¶¯¸ñµ²
+"Swordman/AutoGuard.skl" ï¿½Ô¶ï¿½ï¿½ï¿½
 4
-"Swordman/LightSwordMastery.skl" ¹â½£¾«Í¨
+"Swordman/LightSwordMastery.skl" ï¿½â½£ï¿½ï¿½Í¨
 5
-"Swordman/HardAttack.skl" ¹íÕ¶
+"Swordman/HardAttack.skl" ï¿½ï¿½Õ¶
 6
-"Swordman/HardAttackCharge.skl" ÊÉÁé¹íÕ¶
+"Swordman/HardAttackCharge.skl" ï¿½ï¿½ï¿½ï¿½ï¿½Õ¶
 7
-"Swordman/HitBack.skl" Äæ×ª·´»÷
+"Swordman/HitBack.skl" ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½
 8
-"Swordman/TripleSlash.skl" Èý¶ÎÕ¶
+"Swordman/TripleSlash.skl" ï¿½ï¿½ï¿½ï¿½Õ¶
 9
-"Swordman/MomentarySlash.skl" °Îµ¶Õ¶
+"Swordman/MomentarySlash.skl" ï¿½Îµï¿½Õ¶
 11
-"Swordman/DashAttackMultiHit.skl" Á¬Í»´Ì
+"Swordman/DashAttackMultiHit.skl" ï¿½ï¿½Í»ï¿½ï¿½
 12
-"Swordman/ShortSwordMastery.skl" ¶Ì½£¾«Í¨
+"Swordman/ShortSwordMastery.skl" ï¿½Ì½ï¿½ï¿½ï¿½Í¨
 13
-"Swordman/BladeMastery.skl" Ì«µ¶¾«Í¨ 
+"Swordman/BladeMastery.skl" Ì«ï¿½ï¿½ï¿½ï¿½Í¨ 
 14
-"Swordman/HeavySwordMastery.skl" ¾Þ½£¾«Í¨
+"Swordman/HeavySwordMastery.skl" ï¿½Þ½ï¿½ï¿½ï¿½Í¨
 15
-"Swordman/BluntMastery.skl" ¶ÛÆ÷¾«Í¨
+"Swordman/BluntMastery.skl" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨
 16
-"Swordman/AshenFork.skl" Òø¹âÂäÈÐ
+"Swordman/AshenFork.skl" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 17
-"Swordman/JumpAttackMulti.skl" ¿ÕÖÐÁ¬Õ¶
+"Swordman/JumpAttackMulti.skl" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¶
 18
-"Swordman/GhostStep.skl" ¹íÓ°²½
+"Swordman/GhostStep.skl" ï¿½ï¿½Ó°ï¿½ï¿½
 19
-"Swordman/PinchPowerUp.skl" ÑªÆø»½ÐÑ
+"Swordman/PinchPowerUp.skl" Ñªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 20
-"Swordman/NormalWave.skl" µØÁÑ²¨¶¯½£
+"Swordman/NormalWave.skl" ï¿½ï¿½ï¿½Ñ²ï¿½ï¿½ï¿½ï¿½ï¿½
 21
-"Swordman/IceWave.skl" ±ù²¨
+"Swordman/IceWave.skl" ï¿½ï¿½ï¿½ï¿½
 22
-"Swordman/FireWave.skl" ±¬Ñ×¡¤²¨¶¯½£
+"Swordman/FireWave.skl" ï¿½ï¿½ï¿½×¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 23
-"Swordman/Sacrifice.skl" ÊÈÑª
+"Swordman/Sacrifice.skl" ï¿½ï¿½Ñª
 24
-"Swordman/BloodBlast.skl" Å­Æø±¬·¢
+"Swordman/BloodBlast.skl" Å­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 25
-"Swordman/Khazan.skl" ºìÕó
+"Swordman/Khazan.skl" ï¿½ï¿½ï¿½ï¿½
 27
-"Swordman/WeaponMasteryUp.skl" ÎäÆ÷°ÂÒå
+"Swordman/WeaponMasteryUp.skl" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 29
-"Swordman/DarkFriendship.skl" °µÖ®Ç×ºÍ
+"Swordman/DarkFriendship.skl" ï¿½ï¿½Ö®ï¿½×ºï¿½
 30
-"Swordman/DarkToleranceUp.skl" °µÔÂ½µÁÙ
+"Swordman/DarkToleranceUp.skl" ï¿½ï¿½ï¿½Â½ï¿½ï¿½ï¿½
 31
-"Swordman/GrabBlastBlood.skl" ÊÈ»êÖ®ÊÖ
+"Swordman/GrabBlastBlood.skl" ï¿½È»ï¿½Ö®ï¿½ï¿½
 32
-"Swordman/ReleaseWave.skl" ²¨¶¯±¬·¢
+"Swordman/ReleaseWave.skl" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 33
-"Swordman/EquipLightSword.skl" ¹â½£ÕÆÎÕ
+"Swordman/EquipLightSword.skl" ï¿½â½£ï¿½ï¿½ï¿½ï¿½
 34
-"Swordman/DieHard.skl" ËÀÍö¿¹¾Ü
+"Swordman/DieHard.skl" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 35
-"Swordman/GhostPowerUp.skl" ·âÓ¡½â³ý
+"Swordman/GhostPowerUp.skl" ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½
 36
-"Swordman/Saya.skl" ±ùÕó
+"Swordman/Saya.skl" ï¿½ï¿½ï¿½ï¿½
 37
-"Swordman/FastEquip.skl" ¼²Ó°ÊÖ
+"Swordman/FastEquip.skl" ï¿½ï¿½Ó°ï¿½ï¿½
 38
-"Swordman/OverDrive.skl" ÆÆ¼«±øÈÐ
+"Swordman/OverDrive.skl" ï¿½Æ¼ï¿½ï¿½ï¿½ï¿½ï¿½
 39
-"Swordman/DurabilityUp.skl" ÎäÆ÷½ÚÖÆ
+"Swordman/DurabilityUp.skl" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 40
-"Swordman/Reckless.skl" ±©×ß
+"Swordman/Reckless.skl" ï¿½ï¿½ï¿½ï¿½
 41
-"Swordman/Bremen.skl" ÂÌÕó
+"Swordman/Bremen.skl" ï¿½ï¿½ï¿½ï¿½
 42
-"Swordman/DisjointItemDark.skl" ºÚ°µ·Ö½â£¿
+"Swordman/DisjointItemDark.skl" ï¿½Ú°ï¿½ï¿½Ö½â£¿
 43
 "Swordman/JumpAttackHighFast.skl" 
 44
-"Swordman/TombStoneRain.skl" ËÀÍöÄ¹±®
+"Swordman/TombStoneRain.skl" ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½
 46
-"Swordman/UpperSlash.skl" ÉÏÌô
+"Swordman/UpperSlash.skl" ï¿½ï¿½ï¿½ï¿½
 47
-"Swordman/WaveMark.skl" ²¨¶¯¿ÌÓ¡
+"Swordman/WaveMark.skl" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¡
 49
-"Swordman/BackStepCutter.skl" ºóÌøÕ¶
+"Swordman/BackStepCutter.skl" ï¿½ï¿½ï¿½ï¿½Õ¶
 50
-"Swordman/GrandWave.skl" Ð°¹âÕ¶
+"Swordman/GrandWave.skl" Ð°ï¿½ï¿½Õ¶
 51
-"Swordman/GrandWaveCharge.skl" ÐÞÂÞÐ°¹âÕ¶
+"Swordman/GrandWaveCharge.skl" ï¿½ï¿½ï¿½ï¿½Ð°ï¿½ï¿½Õ¶
 52
-"Swordman/DOTArea.skl" É±Òâ²¨¶¯
+"Swordman/DOTArea.skl" É±ï¿½â²¨ï¿½ï¿½
 53
-"Swordman/MindFlash.skl" ´ìÕÛÒâÖ¾
+"Swordman/MindFlash.skl" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾
 55
 "Swordman/SenseViolentTemper.skl" 
 56
-"Swordman/ArmorMasteryHeavyBK.skl" ÖØ¼×¾«Í¨
+"Swordman/ArmorMasteryHeavyBK.skl" ï¿½Ø¼×¾ï¿½Í¨
 57
-"Swordman/ShockWaveArea.skl" Ð°¹â²¨¶¯Õó
+"Swordman/ShockWaveArea.skl" Ð°ï¿½â²¨ï¿½ï¿½ï¿½ï¿½
 58
-"Swordman/VaneSlash.skl" ÁÑ²¨Õ¶
+"Swordman/VaneSlash.skl" ï¿½Ñ²ï¿½Õ¶
 60
-"Swordman/GhostStepSlash.skl" ¹íÓ°ÉÁ
+"Swordman/GhostStepSlash.skl" ï¿½ï¿½Ó°ï¿½ï¿½
 61
-"Swordman/ArmorMasteryPlateWave.skl" °å¼×¾«Í¨ °¢ÐÞÂÞ 
+"Swordman/ArmorMasteryPlateWave.skl" ï¿½ï¿½×¾ï¿½Í¨ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 62
-"Swordman/StandAloneWave.skl" ÎÞË«²¨
+"Swordman/StandAloneWave.skl" ï¿½ï¿½Ë«ï¿½ï¿½
 63
-"Swordman/BloodyVigorous.skl" ÑªÆøÍúÊ¢
+"Swordman/BloodyVigorous.skl" Ñªï¿½ï¿½ï¿½ï¿½Ê¢
 64
-"Swordman/GoreCross.skl" Ê®×ÖÕ¶
+"Swordman/GoreCross.skl" Ê®ï¿½ï¿½Õ¶
 65
-"Swordman/HopSmash.skl" ±ÀÉ½»÷
+"Swordman/HopSmash.skl" ï¿½ï¿½É½ï¿½ï¿½
 67
-"Swordman/WeaponCombo.skl" Àï¹í
+"Swordman/WeaponCombo.skl" ï¿½ï¿½ï¿½
 68
-"Swordman/ChargeCrash.skl" ÆÆ¾üÉýÁú»÷
+"Swordman/ChargeCrash.skl" ï¿½Æ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 72
-"Swordman/RapidMoveSlash.skl" ÃÍÁú¶Ï¿ÕÕ¶
+"Swordman/RapidMoveSlash.skl" ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½Õ¶
 73
-"Swordman/IllusionSlash.skl" »ÃÓ°½£Îè
+"Swordman/IllusionSlash.skl" ï¿½ï¿½Ó°ï¿½ï¿½ï¿½ï¿½
 74
-"Swordman/WaveSpinArea.skl" ²»¶¯Ã÷ÍõÕó
+"Swordman/WaveSpinArea.skl" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 75
-"Swordman/EpidemicRasa.skl" ÎÁÒßÖ®ÂÞÉ²
+"Swordman/EpidemicRasa.skl" ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½É²
 76
-"Swordman/Frenzy.skl" ÑªÖ®¿ñ±©
+"Swordman/Frenzy.skl" ÑªÖ®ï¿½ï¿½
 77
-"Swordman/MoonlightSlash.skl" ÔÂ¹âÕ¶
+"Swordman/MoonlightSlash.skl" ï¿½Â¹ï¿½Õ¶
 79
-"Swordman/BloodyRave.skl" ÊÉ»ê·âÄ§Õ¶
+"Swordman/BloodyRave.skl" ï¿½É»ï¿½ï¿½Ä§Õ¶
 80
-"Swordman/MoonlightSlashFull.skl" ÂúÔÂÕ¶
+"Swordman/MoonlightSlashFull.skl" ï¿½ï¿½ï¿½ï¿½Õ¶
 81
-"Swordman/OutRageBreak.skl" ±ÀÉ½ÁÑµØÕ¶
+"Swordman/OutRageBreak.skl" ï¿½ï¿½É½ï¿½Ñµï¿½Õ¶
 82
-"Swordman/Kalla.skl" Ú¤Ñ×Ö®¿¨Âå
+"Swordman/Kalla.skl" Ú¤ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½
 84
-"Swordman/Keiga.skl" ²ÐÓ°Ö®îø¼×
+"Swordman/Keiga.skl" ï¿½ï¿½Ó°Ö®ï¿½ï¿½ï¿½ï¿½
 85
-"Swordman/Hellbenter.skl" Ä§ÓüÑªÉ² ºìÑÛ¾õÐÑ
+"Swordman/Hellbenter.skl" Ä§ï¿½ï¿½ÑªÉ² ï¿½ï¿½ï¿½Û¾ï¿½ï¿½ï¿½
 86
-"Swordman/HundredSword.skl" ¼« ¡¤ ¹í½£Êõ£¨±©·çÊ½£©
+"Swordman/HundredSword.skl" ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½
 87
-"Swordman/Blache.skl" µÚÆß¹íÉñ£ºÐ°Éñ²ÀÀ­ÐÞ
+"Swordman/Blache.skl" ï¿½ï¿½ï¿½ß¹ï¿½ï¿½ï¿½Ð°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 88
-"Swordman/WaveEye.skl" °µÌì²¨¶¯ÑÛ
+"Swordman/WaveEye.skl" ï¿½ï¿½ï¿½ì²¨ï¿½ï¿½ï¿½ï¿½
 89
-"Swordman/DarkAura.skl" ¿Ö¾å¹â»·
+"Swordman/DarkAura.skl" ï¿½Ö¾ï¿½â»·
 90
-"Swordman/BleedingMastery.skl" ³öÑªÕÆÎÕ
+"Swordman/BleedingMastery.skl" ï¿½ï¿½Ñªï¿½ï¿½ï¿½ï¿½
 91
 "Swordman/DefenseDownOnCritical.skl" 
 92
 "Swordman/StuckUpOnCounter.skl"
 93
-"Swordman/ArmorMasteryClothSB.skl" ²¼¼×¾«Í¨ ¹íÆü
+"Swordman/ArmorMasteryClothSB.skl" ï¿½ï¿½ï¿½×¾ï¿½Í¨ ï¿½ï¿½ï¿½ï¿½
 94
-"Swordman/ArmorMasteryLightWM.skl" Çá¼×¾«Í¨ ½£»ê
+"Swordman/ArmorMasteryLightWM.skl" ï¿½ï¿½×¾ï¿½Í¨ ï¿½ï¿½ï¿½ï¿½
 95
-"Swordman/TombStoneRainEx.skl" Ä¹±®Èý¾øÕó
+"Swordman/TombStoneRainEx.skl" Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 96
-"Swordman/SayaEx.skl" ±ù¾§Ö®ÈøÑÇ
+"Swordman/SayaEx.skl" ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½
 97
-"Swordman/MomentarySlashEx.skl" ´ó°Îµ¶
+"Swordman/MomentarySlashEx.skl" ï¿½ï¿½Îµï¿½
 98
-"Swordman/ChargeCrashEx.skl" ÆÆ¾üÕ¶Áú»÷
+"Swordman/ChargeCrashEx.skl" ï¿½Æ¾ï¿½Õ¶ï¿½ï¿½ï¿½ï¿½
 99
-"Swordman/FireWaveEx.skl" ´ó»ð²¨
+"Swordman/FireWaveEx.skl" ï¿½ï¿½ï¿½
 100
-"Swordman/IceWaveEx.skl" ´ó±ù²¨
+"Swordman/IceWaveEx.skl" ï¿½ï¿½ï¿½ï¿½ï¿½
 101
-"Swordman/BloodBlastEx.skl" ´óÅ­Æø
+"Swordman/BloodBlastEx.skl" ï¿½ï¿½Å­ï¿½ï¿½
 102
-"Swordman/GrabBlastBloodEx.skl" Ãð»êÖ®ÊÖ
+"Swordman/GrabBlastBloodEx.skl" ï¿½ï¿½ï¿½Ö®ï¿½ï¿½
 103
-"Swordman/BloodSword.skl" ÑªÆøÖ®ÈÐ
+"Swordman/BloodSword.skl" Ñªï¿½ï¿½Ö®ï¿½ï¿½
 105
-"Swordman/FlowMind.skl" Á÷ÐÄ
+"Swordman/FlowMind.skl" ï¿½ï¿½ï¿½ï¿½
 107
-"Swordman/FlowMindOne.skl" Á÷ÐÄ¡¤´Ì
+"Swordman/FlowMindOne.skl" ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½
 108
-"Swordman/FlowMindTwo.skl" Á÷ÐÄ¡¤Ô¾
+"Swordman/FlowMindTwo.skl" ï¿½ï¿½ï¿½Ä¡ï¿½Ô¾
 109
-"Swordman/FlowMindThree.skl" Á÷ÐÄ¡¤Éý
+"Swordman/FlowMindThree.skl" ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½
 110
-"Swordman/FlowMindPowerUp.skl" Á÷ÐÄ¡¤¿ñ
+"Swordman/FlowMindPowerUp.skl" ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½
 111
-"Swordman/GhostSideWind.skl" ¹íÓ°±Þ
+"Swordman/GhostSideWind.skl" ï¿½ï¿½Ó°ï¿½ï¿½
 151
 "Swordman/WaveMarkEx.skl"
 152
@@ -239,16 +239,16 @@
 159
 "Swordman/VaneSlashEx.skl"
 160
-"Swordman/ReflectGuardEx.skl" ¹íÓ¡ÖéEX?
+"Swordman/ReflectGuardEx.skl" ï¿½ï¿½Ó¡ï¿½ï¿½EX?
 161
 "Swordman/BasicAttackUpEx.skl"
 162
 "Swordman/DashAttackMultiHitEx.skl"
 163
-"Swordman/GuardEx.skl" Ç¿»¯-¸ñµ²
-ÖÐ¼ä¶¼ÊÇtp¼¼ÄÜ
+"Swordman/GuardEx.skl" Ç¿ï¿½ï¿½-ï¿½ï¿½
+ï¿½Ð¼ä¶¼ï¿½ï¿½tpï¿½ï¿½ï¿½ï¿½
 164
-"Swordman/KhazanEx.skl" Ç¿»¯-¿¨ÔÞ
+"Swordman/KhazanEx.skl" Ç¿ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½
 165
 "Swordman/GrabBlastBloodExp.skl"
 166
@@ -258,23 +258,23 @@
 168
 "Swordman/BloodSwordEx.skl"
 169
-"Swordman/BackStep.skl" ºóÌø
+"Swordman/BackStep.skl" ï¿½ï¿½ï¿½ï¿½
 172
-"Swordman/ArmorMasteryLight.skl" Çá¼×¾«Í¨
+"Swordman/ArmorMasteryLight.skl" ï¿½ï¿½×¾ï¿½Í¨
 173
-"Swordman/ArmorMasteryHeavy.skl" ÖØ¼×¾«Í¨
+"Swordman/ArmorMasteryHeavy.skl" ï¿½Ø¼×¾ï¿½Í¨
 174
-"Swordman/BasicAttackUp.skl" »ù´¡¹¥»÷ÌáÉý
+"Swordman/BasicAttackUp.skl" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 175
-"Swordman/JumpPowerUp.skl" Ô¾Ïè
+"Swordman/JumpPowerUp.skl" Ô¾ï¿½ï¿½
 176
-"Swordman/MagicalAttackUp.skl" ÖÇÁ¦ÌáÉý
+"Swordman/MagicalAttackUp.skl" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 177
-"Swordman/ThrowMastery.skl" Í¶ÖÀ¾«Í¨
+"Swordman/ThrowMastery.skl" Í¶ï¿½ï¿½ï¿½ï¿½Í¨
 178
-"Swordman/PhysicalBackAttackCritical.skl" ÎïÀí±³»÷
+"Swordman/PhysicalBackAttackCritical.skl" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 179
-"Swordman/DisjointItem.skl" ·Ö½â
+"Swordman/DisjointItem.skl" ï¿½Ö½ï¿½
 180
 "Swordman/SuperArmorOnCast.skl" 
 181
@@ -286,66 +286,66 @@
 184
 "Swordman/CompoundChemistry.skl"
 185
-"Swordman/ArmorMasteryLeather.skl" Æ¤¼×¾«Í¨
+"Swordman/ArmorMasteryLeather.skl" Æ¤ï¿½×¾ï¿½Í¨
 186
-"Swordman/PhysicalCriticalHitUp.skl" ÎïÀí±©»÷
+"Swordman/PhysicalCriticalHitUp.skl" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 187
-"Swordman/ArmorMasteryCloth.skl" ²¼¼×¾«Í¨
+"Swordman/ArmorMasteryCloth.skl" ï¿½ï¿½ï¿½×¾ï¿½Í¨
 188
-"Swordman/MagicalCriticalHitUp.skl" Ä§·¨±©»÷
+"Swordman/MagicalCriticalHitUp.skl" Ä§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 189
-"Swordman/MagicalBackAttackCritical.skl" Ä§·¨±³»÷
+"Swordman/MagicalBackAttackCritical.skl" Ä§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 190
-"Swordman/QuickStanding.skl" ÊÜÉí¶×·ü
+"Swordman/QuickStanding.skl" ï¿½ï¿½ï¿½ï¿½ï¿½×·ï¿½
 195
-"Swordman/BasicHpMaxUp.skl" »ù´¡HPÌáÉý
+"Swordman/BasicHpMaxUp.skl" ï¿½ï¿½ï¿½ï¿½HPï¿½ï¿½ï¿½ï¿½
 196
-"Swordman/ArmorMasteryPlate.skl" °å¼×¾«Í¨
+"Swordman/ArmorMasteryPlate.skl" ï¿½ï¿½×¾ï¿½Í¨
 197
-"Swordman/Conversion.skl" ×ª»»
+"Swordman/Conversion.skl" ×ªï¿½ï¿½
 200
-"Swordman/StatusUp.skl" ×´Ì¬ÌáÉý
+"Swordman/StatusUp.skl" ×´Ì¬ï¿½ï¿½ï¿½ï¿½
 201
-"Swordman/ExperienceUp.skl" ¾­ÑéÌáÉý
+"Swordman/ExperienceUp.skl" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 191
-"Swordman/Enchant.skl" ¸½Ä§
+"Swordman/Enchant.skl" ï¿½ï¿½Ä§
 192
-"Swordman/DollMaking.skl" ÈËÅ¼ÖÆÔì
+"Swordman/DollMaking.skl" ï¿½ï¿½Å¼ï¿½ï¿½ï¿½ï¿½
 193
-"Swordman/Alchemy.skl" Á¶½ðÊõ
+"Swordman/Alchemy.skl" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 194
-"Swordman/OpenDisjointShop.skl" ´ò¿ª·Ö½âÉÌµê
+"Swordman/OpenDisjointShop.skl" ï¿½ò¿ª·Ö½ï¿½ï¿½Ìµï¿½
 210
-"Swordman/ReleaseWaveEx.skl" Ç¿»¯¡ª²¨¶¯±¬·¢
+"Swordman/ReleaseWaveEx.skl" Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 211
-"Swordman/GrandWaveEx.skl" Ç¿»¯¡ªÐ°¹âÕ¶
+"Swordman/GrandWaveEx.skl" Ç¿ï¿½ï¿½ï¿½ï¿½Ð°ï¿½ï¿½Õ¶
 212
-"Swordman/FireWaveExp.skl" Ç¿»¯-»ð²¨
+"Swordman/FireWaveExp.skl" Ç¿ï¿½ï¿½-ï¿½ï¿½
 213
-"Swordman/StandAloneWaveEx.skl" Ç¿»¯-ÎÞË«²¨
+"Swordman/StandAloneWaveEx.skl" Ç¿ï¿½ï¿½-ï¿½ï¿½Ë«ï¿½ï¿½
 214
-"Swordman/WaveSpinAreaEx.skl" Ç¿»¯-²»¶¯Ã÷ÍõÕó
+"Swordman/WaveSpinAreaEx.skl" Ç¿ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 215
-"Swordman/UpperSlashEx.skl" Ç¿»¯-ÉÏÌô
+"Swordman/UpperSlashEx.skl" Ç¿ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½
 216
-"Swordman/IceWaveExp.skl" Ç¿»¯-±ù²¨
+"Swordman/IceWaveExp.skl" Ç¿ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½
 217
-"Swordman/IllusionSlashExp.skl" Ç¿»¯¡ª»ÃÓ°½£Îè
+"Swordman/IllusionSlashExp.skl" Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½ï¿½ï¿½
 218
-"Swordman/ChargeCrashExp.skl" Ç¿»¯- ÆÆ¾üÉýÁú»÷
+"Swordman/ChargeCrashExp.skl" Ç¿ï¿½ï¿½- ï¿½Æ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 219
-"Swordman/FlowMindOneEx.skl" Ç¿»¯¡ª Á÷ÐÄ¡¤´Ì
+"Swordman/FlowMindOneEx.skl" Ç¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½
 220
-"Swordman/FlowMindTwoEx.skl" Ç¿»¯¡ªÁ÷ÐÄ¡¤Ô¾
+"Swordman/FlowMindTwoEx.skl" Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½Ô¾
 221
-"Swordman/FlowMindThreeEx.skl" Ç¿»¯¡ªÁ÷ÐÄ¡¤Éý
+"Swordman/FlowMindThreeEx.skl" Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½
 224
-"Swordman/SayaExp.skl" Ç¿»¯¡ª±ùÕó
+"Swordman/SayaExp.skl" Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 225
-"Swordman/TombStoneRainExp.skl" Ç¿»¯¡ªËÀÍöÄ¹±®
+"Swordman/TombStoneRainExp.skl" Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½
 226
-"Swordman/GhostStepSlashEx.skl" Ç¿»¯¡ª¹íÓ°ÉÁ
+"Swordman/GhostStepSlashEx.skl" Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½
 227
-"Swordman/KallaEx.skl" Ç¿»¯¡ªÚ¤Ñ×Ö®¿¨Âå
+"Swordman/KallaEx.skl" Ç¿ï¿½ï¿½ï¿½ï¿½Ú¤ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½
 228
-"Swordman/ReflectGuardExp.skl" Ç¿»¯¡ª¹íÓ¡Öé
+"Swordman/ReflectGuardExp.skl" Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¡ï¿½ï¿½
